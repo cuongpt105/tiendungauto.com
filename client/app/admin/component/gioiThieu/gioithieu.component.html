@@ -1,0 +1,33 @@
+<div class="title-for-upload-gioi-thieu"> Chon file de upload</div>
+<input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto" multiple/>
+
+<div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
+    <div class="progress-bar-wrapper">
+        <progress id="progressbar" value="{{numberOfDataUpload}}" max="100"></progress>
+        <span class="progress-value">{{numberOfDataUpload}}%</span>
+    </div>
+</div>
+
+<div class="file-upload-panel">
+    <div>Danh sach file trong gioi thieu</div>
+    <div class="file-gioi-thieu-item" *ngFor="let file of files"> 
+        <div class="content-file">
+            <img class="image-file" src="{{file.pathFile}}" width="100">
+            <div class="file-name"> {{file.originalName}}</div>
+            <div class="path-file"> {{file.pathFile}}</div>
+        </div>
+
+        <div class="delete-file">
+            <a href="javascript:void(0)" (click)="deleteFile(file)">
+                <i class="fa fa-trash-o fa-fw"> </i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content-panel">
+    <p-editor [(ngModel)]="gioithieu.content" [style]="{'height':'320px'}"></p-editor>
+    <button class="btn-cancel" (click)="cancelGioiThieu()">Huy</button>
+    <button class="btn-save" (click)="saveGioiThieu()">Luu</button>
+</div>
+

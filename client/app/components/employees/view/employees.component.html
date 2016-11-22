@@ -1,0 +1,14 @@
+<h2> List Employees </h2>
+
+<button (click) = "createEmployee()">Create Employee</button>
+<ul class="employeeItem">
+    <li *ngFor="let employee of employees" 
+        [class.selected]="isSelectedEmployee(employee._id)">
+        <span class="badge">{{employee._id}}</span>{{employee.name}} {{employee.firstName}}
+        
+        <span (click)="viewEmployee(employee._id)">View</span>
+        <span (click)="updateEmployee(employee._id)">Update</span>
+        
+    </li> 
+</ul>   
+    

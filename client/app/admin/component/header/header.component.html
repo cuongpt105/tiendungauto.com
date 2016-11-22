@@ -1,0 +1,18 @@
+<div class="title-for-upload-header"> Chon file de upload</div>
+<input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto"/>
+
+<button type="button" (click)="upload()">Upload</button>
+
+<div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
+    <div class="progress-bar-wrapper">
+        <progress id="progressbar" value="{{numberOfDataUpload}}" max="100"></progress>
+        <span class="progress-value">{{numberOfDataUpload}}%</span>
+    </div>
+</div>
+
+<div id="headerFileUploaded" *ngIf="header" >
+    <h2>File header da upload</h2>
+    <div id="contentHeader">
+        <img src="{{header.file.pathFile}}" height="300">
+    </div>
+</div>

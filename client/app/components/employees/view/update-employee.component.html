@@ -1,0 +1,23 @@
+<h2> Update Employee</h2>
+<div *ngIf="employee">
+    <label>Id:</label> 
+    <input [(ngModel)] = "employee._id" readonly/>
+    
+    <label>Name:</label> 
+    <input [(ngModel)] = "employee.name"/>
+    
+    <label>First Name:</label> 
+    <input [(ngModel)] = "employee.firstName"/>
+    
+    <label>Birthday:</label> 
+    <input [(ngModel)] = "employee.birthday"/>
+    
+    <label>Address:</label> 
+    <input [(ngModel)] = "employee.address"/>
+    
+    <label>Salary:</label>
+    <input [(ngModel)] = "employee.salary"/>
+    
+    <button (click) = "gotoDetail()">Back</button>
+    <button (click) = "update()">Save</button>
+</div>

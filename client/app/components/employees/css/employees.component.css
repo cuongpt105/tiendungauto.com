@@ -1,0 +1,4 @@
+.employeeItem li.selected {
+    background-color: red;
+    color: white;
+}

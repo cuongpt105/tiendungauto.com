@@ -1,0 +1,43 @@
+<div class="danhmucContainer row">
+    <button class="btn" (click)="addRootDanhMuc()" title="Tao Danh Muc" value="Tao Danh Muc">
+        <i class="fa fa-plus fa-fw"></i>
+    </button>
+    <div class="dm-header">
+        <div class="col-xs-6 col-md-6 dm-header-name">Ten</div>
+        <div class="col-xs-2 col-md-2 dm-header-position">Vi Tri</div>
+        <div class="col-xs-2 col-md-2 dm-header-button"></div>
+    </div>
+    <danh-muc-item [danhmucs]="danhmucs" 
+        (onCreateDanhMuc)="onCreateDanhMuc($event)"
+        (onEditDanhMuc)="onEditDanhMuc($event)"
+        (onDeleteDanhMuc)="onDeleteDanhMuc($event)"></danh-muc-item>
+</div>
+
+===========================
+<div class="danhmucModifyContainer row" *ngIf="danhmuc">
+    <div> Ten Danh Muc </div>
+    <input class="dm-name" [(ngModel)]="danhmuc.name"/>
+
+    <div> Mo Ta </div>
+    <input class="dm-description" [(ngModel)]="danhmuc.description"/>
+
+    <div> Thu Tu </div>
+    <input class="dm-position" [(ngModel)]="danhmuc.position"/>
+
+    <div> Trang Thai </div>
+    <input class="dm-status" [(ngModel)]="danhmuc.status" type="checkbox"/>
+
+    <div> Toi uu the tieu de </div>
+    <input class="dm-seo-title" [(ngModel)]="danhmuc.seoTitle"/>
+    
+    <div> Toi uu the tu khoa </div>
+    <input class="dm-seo-keyword" [(ngModel)]="danhmuc.seoKeyword"/>
+    
+    <div> Toi uu the mo ta </div>
+    <input class="dm-seo-description" [(ngModel)]="danhmuc.seoDescription"/>
+
+    <div class="dm-button-group">
+        <button class="btn-cancel" (click)="cancelDanhMuc()">Huy</button>
+        <button class="btn-save" (click)="saveDanhMuc()">Luu</button>
+    </div>
+</div>

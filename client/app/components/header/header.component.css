@@ -1,0 +1,205 @@
+.header-holder {
+  height: 100px;
+}
+
+.header-image {
+ max-height: 100px;
+}
+
+/* search holder */
+.search-holder {
+  margin-top: 10px;
+}
+
+.search-holder .contact-row {
+    line-height: 20px;
+    color: #9b9b9b;
+}
+
+.search-holder .contact-row .phone {
+    margin: 0 10px 0 0;
+    border-right: 1px solid #E2E2E2;
+    padding-right: 10px;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search-holder .contact-row .icon {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.phone span, .phone .icon {
+  color: red;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.contact-row .address .icon {
+  color: #3498db;
+}
+
+.contact-row .address span {
+  vertical-align: middle;
+}
+
+/* input search */
+.search-holder .search-area {
+    border: 1px solid #e2e2e2;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin: 8px 0 0;
+}
+
+.search-holder .search-area .search-field {
+    border: medium none;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    padding: 8px;
+    width: 85%;
+}
+
+.search-holder .search-area .search-button {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    float: right;
+    margin: 0px;
+    padding: 7px 19px 8px;
+    text-align: center;
+    background: #f6f6f6;
+    border-left: 1px solid #E0E0E0;
+}
+
+.search-holder .search-area .search-button:after {
+    color: #b2b2b2;
+    content: "\f002";
+    font-family: fontawesome;
+    vertical-align: middle;
+}
+
+/* config for cart */
+.cart-holder {
+  margin-top: 40px;
+}
+
+.dropdown-cart .lnk-cart {
+    padding: 0px;
+    border: 1px solid #e1e1e1;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    color: #666666;
+}
+
+.dropdown-cart .lnk-cart .items-cart-inner {
+    position: relative;
+}
+
+.dropdown-cart .lnk-cart .items-cart-inner .total-price-basket {
+    padding: 2px 15px;
+    font-family: 'FjallaOneRegular';
+    float: left;
+    min-width: 100px;
+}
+
+.dropdown-cart .lnk-cart .items-cart-inner .total-price-basket .total-price {
+    color: #3498db;
+}
+
+.total-price .value {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.dropdown-cart .lnk-cart .items-cart-inner .basket {
+    float: right;
+    background: #efefef;
+    padding: 12px;
+    border-left: 1px solid #e1e1e1;
+    padding: 9px 15px;
+}
+
+.dropdown-cart .lnk-cart .items-cart-inner .basket-item-count {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 21px;
+    position: absolute;
+    right: 33px;
+    top: -13px;
+    width: 21px;
+    background: #f1c40f;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px;
+}
+
+/*  config for menu */
+.header-nav {
+    float: left;
+    width: 100%;
+    background-color: rgb(52, 152, 219); 
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(52, 152, 219);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+ul.topnav li a:hover {background-color: rgb(29, 108, 161);}
+ul.topnav li a.active {background-color: rgb(29, 108, 161);}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+      float: none;
+      display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}

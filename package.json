@@ -1,0 +1,30 @@
+{
+  "name": "node_mongo_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuongpt105/node_mongo_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuongpt105/node_mongo_test/issues"
+  },
+  "homepage": "https://github.com/cuongpt105/node_mongo_test#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "log4js": "^0.6.38",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.0",
+    "multer": "^1.2.0"
+  }
+}

@@ -1,0 +1,18 @@
+<h2>Create Employee</h2>
+<label>Name:</label> 
+    <input [(ngModel)] = "employee.name"/>
+    
+    <label>First Name:</label> 
+    <input [(ngModel)] = "employee.firstName"/>
+    
+    <label>Birthday:</label> 
+    <input [(ngModel)] = "employee.birthday"/>
+    
+    <label>Address:</label> 
+    <input [(ngModel)] = "employee.address"/>
+    
+    <label>Salary:</label>
+    <input [(ngModel)] = "employee.salary"/>
+    
+    <button (click) = "gotoDetail()">Back</button>
+    <button (click) = "create()">Save</button>

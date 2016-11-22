@@ -1,0 +1,43 @@
+<div class="product-item-holder size-big single-product-gallery small-gallery">
+    <div id="owl-single-product" class="owl-carousel owl-theme" style="opacity: 1;display: block;">
+        <div class="owl-wrapper-outer">
+            <div class="single-product-gallery-item">
+                <a data-rel="prettyphoto" href="javascript:void(0)">
+                    <img src="../../{{currentGallery.path}}" class="img-responsive">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.single-product-slider -->
+    <div class="single-product-gallery-thumbs gallery-thumbs">
+        <div id="owl-single-product-thumbnails" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer">
+                <div class="owl-wrapper" 
+                    [ngStyle]="{'width': (itemThumbSize*totalGallery)+'px', 'transform': 'translate3d(-'+(index*itemThumbSize)+'px, 0px, 0px)'}" 
+                    style="left: 0px; display: block; transition: all 200ms ease;">
+
+                    <div class="owl-item" [ngClass]="{'active': (gallery === currentGallery)}"
+                        [ngStyle]="{'width': itemThumbSize+'px'}" 
+                        *ngFor="let gallery of galleries">
+                        <a class="horizontal-thumb" href="javascript:void(0)" (click)="onSelectImageThumb(gallery)">
+                            <img src="../../{{gallery.path}}" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /#owl-single-product-thumbnails -->
+        <div class="nav-holder left hidden-xs" *ngIf="isShowLeftBtnThumb">
+            <a class="prev-btn slider-prev" data-target="#owl-single-product-thumbnails" 
+                href="javascript:void(0)" (click)="onPreviousThumb()"></a>
+        </div>
+        <!-- /.nav-holder -->
+        <div class="nav-holder right hidden-xs" *ngIf="isShowRightBtnThumb">
+            <a class="next-btn slider-next" data-target="#owl-single-product-thumbnails" 
+                href="javascript:void(0)" (click)="onNextThumb()"></a>
+        </div>
+        <!-- /.nav-holder -->
+    </div>
+    <!-- /.gallery-thumbs -->
+</div>

@@ -1,0 +1,13 @@
+<div class="trang-chu-panel">
+    <!-- SHOW GALARY -->
+    <div class="no-margin col-md-12 carousel-panel" *ngIf="galleries.length > 0">
+        <carousel [carousels]="galleries" [total]="galleries.length"></carousel>
+    </div>
+
+    <!-- SHOW LIST PRODUCT -->
+    <div class="no-margin col-md-12 home-content-panel">
+        <product-group [isShowSort]="false" title="Sản phẩm mới nhất" [total]="0" 
+            [limit]="12" [currentPage]="0" [products]="products">
+        </product-group>  
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="title-for-upload-gioi-thieu"> Chon file de upload</div>
+<input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto" multiple/>
+
+<div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
+    <div class="progress-bar-wrapper">
+        <progress id="progressbar" value="{{numberOfDataUpload}}" max="100"></progress>
+        <span class="progress-value">{{numberOfDataUpload}}%</span>
+    </div>
+</div>
+
+<div class="tin-tuc-file-panel">
+    <div>Danh sach file trong tin tuc</div>
+    <div class="col-md-12 file-tin-tuc-item" *ngFor="let tintucfile of tintucfiles"> 
+        <div class="col-md-11 content-file">
+            <img class="col-md-2 image-file" src="{{tintucfile.file.pathFile}}" width="100">
+            <div class="col-md-8 file-name"> {{tintucfile.file.originalName}}</div>
+            <div class="col-md-2 path-file"> {{tintucfile.file.pathFile}}</div>
+        </div>
+
+        <div class="col-md-1 delete-file">
+            <a href="javascript:void(0)" (click)="deleteTinTucFile(tintucfile)">
+                <i class="fa fa-trash-o fa-fw"> </i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="tin-tuc-panel">
+    <div *ngIf="tintuc" class="modify-tin-tuc"> 
+        <div class="col-md-12">
+            <div class="col-md-3">Tieu de:</div>
+            <div class="col-md-9">
+                <input class="tin-tuc-title" [(ngModel)]="tintuc.title"/>
+            </div>    
+        </div>
+        
+        <div class="col-md-12">
+            <div class="col-md-3">Anh tieu de:</div>
+            <div class="col-md-9">
+                <select [(ngModel)]="tintuc.imageTitle">
+                    <option *ngFor="let tintucfile of tintucfiles" [ngValue]="tintucfile.file">
+                        {{tintucfile.file.originalName}}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="col-md-12">Noi dung:</div>
+
+            <div class="col-md-12">
+                <p-editor [(ngModel)]="tintuc.content" [style]="{'height':'320px'}"></p-editor>
+            </div>
+        </div>
+
+        <button class="btn-cancel" (click)="cancelTinTuc()">Huy</button>
+        <button class="btn-save" (click)="saveTinTuc()">Luu</button>
+    </div>
+
+    <div class="list-tin-tuc row" *ngIf="!tintuc">
+        <div class="col-md-12">
+            <button class="pull-right btn" (click)="addTinTuc()">Tao Moi Tin Tuc</button>
+        </div>
+        
+        <div class="col-md-12 tin-tuc-item" *ngFor = "let tintuc of tintucs">
+            <div class="col-md-2">
+                <img src="{{tintuc.imageTitle.pathFile}}" width="100px;"/>
+            </div>
+            <div class="col-md-2">{{tintuc.imageTitle.originalName}}</div>
+            <div class="col-md-3">{{tintuc.title}}</div>
+            
+            <div class="col-md-4">
+                <div [innerHTML]="tintuc.content"></div>
+            </div> 
+            
+            <div class="col-md-1 itemButton">
+                <div class="pull-right">
+                    <a href="javascript:void(0)" (click)="editTinTuc(tintuc)" title="Chinh Sua Tin Tuc">
+                        <i class="fa fa-pencil-square-o fa-fw"></i>
+                    </a>
+                    <a href="javascript:void(0)" (click)="deleteTinTuc(tintuc)" title="Xoa Tin Tuc">
+                        <i class="fa fa-trash-o fa-fw"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

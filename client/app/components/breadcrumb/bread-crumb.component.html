@@ -1,0 +1,8 @@
+<div class="breadcrumb-inner" *ngIf="breadCrumbInfos.length > 0">
+    <ul class="list-inline list-unstyled">
+        <li *ngFor="let bc of breadCrumbInfos">
+            <a routerLink="{{bc.link}}">{{bc.value}}</a>
+        </li>
+        <li class="active">{{breadCrumbActive.value}}</li>
+    </ul>
+</div>

@@ -1,0 +1,66 @@
+<div class="no-margin col-md-12">
+    <div class="no-margin col-md-5 product-image-detail-panel">
+        <gallery-holder [galleries]="galleries" *ngIf="galleries.length > 0"></gallery-holder>
+    </div>
+
+    <div class="no-margin col-md-7 product-short-information-panel">
+        <h1 class="header-product-name">{{product.name}}</h1>
+
+        <div class="no-margin col-md-12 product-rating">
+            <rating [value]="productRating" [numberTimeRating]="0" (onRating)="onChangeRating($event)"></rating>
+        </div>
+
+        <div class="product-code">Mã sản phẩm: {{product.code}}</div>
+
+        <div class="product-producer">Nhà sản xuất: {{product.producer}}</div>
+
+        <div class="product-guarantee">Bảo hành: {{product.guarantee}}</div>
+
+        <div class="product-quantity">{{quantityInformation}}</div>
+
+        <div class="product-price">
+            <strong>{{product.priceSell}}₫ </strong>
+        </div>
+
+        <div class="no-margin col-md-12 product-add-cart">
+            <div class="no-margin col-md-2 quantity-label"> Số lượng: </div>
+
+            <input class="col-md-1" type="tel" name="quantity" ([ngModel])="quantityValue" min="1" max="100">
+
+            <div class="col-md-9">
+                <a class="btn btn-primary btn-product-add-cart" href="javascript:void(0)" (click)="addToCart()">
+                    <i class="fa fa-shopping-cart inner-right-vs"></i> 
+                    <span>
+                        Thêm Vào Giỏ Hàng
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="no-margin col-md-12 product-detail-panel">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#productInformationDetail">Chi tiết sản phẩm</a></li>
+        <li><a data-toggle="tab" href="#productTechnicalDetail">Thông tin kỹ thuật</a></li>
+        <li><a data-toggle="tab" href="#productFeedback">Đánh giá sản phẩm</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="productInformationDetail" class="tab-pane fade in active">
+            <div class="product-info-detail">
+                <div [innerHTML]="product.detailDescription"></div>
+            </div>
+        </div>
+        <div id="productTechnicalDetail" class="tab-pane fade">
+            <div class="product-technial-detail">
+                <div [innerHTML]="product.shortDescription"></div>
+            </div>
+        </div>
+        <div id="productFeedback" class="tab-pane fade">
+            <div class="product-feedback">
+
+            </div>
+        </div>
+    </div>
+</div>
