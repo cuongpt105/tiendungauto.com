@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 
 var FileSystemEntity = require('../entity/file-system.entity');
 
