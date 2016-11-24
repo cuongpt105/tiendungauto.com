@@ -1,3 +1,5 @@
+"use strict";
+
 var logger = require('../util/logger');
 
 module.exports = class HandleException {
