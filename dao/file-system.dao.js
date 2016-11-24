@@ -1,8 +1,8 @@
-//var HandleException = require('../util/HandleException');
+var HandleException = require('../util/HandleException.js');
 
 var FileSystemEntity = require('../entity/file-system.entity');
 
-//var handleException = new HandleException("FileSystemDao");
+var handleException = new HandleException("FileSystemDao");
 
 class FileSystemDao {
     constructor() {}
@@ -14,7 +14,7 @@ class FileSystemDao {
 
         fileSystemEntity.save(function(err){
             if (err) {
-                //handleException.logMessageWithError("save", "fileSystemEntity.save", err);
+                handleException.logMessageWithError("save", "fileSystemEntity.save", err);
                 throw err;
             }
         });
@@ -30,7 +30,7 @@ class FileSystemDao {
 
         fileSystemEntity.save(function(err, fileEntity){
             if (err) {
-                //handleException.logMessageWithError("save", "fileSystemEntity.save", err);
+                handleException.logMessageWithError("save", "fileSystemEntity.save", err);
                 callback(err);
             } else {
                 callback(err, fileSystemEntity);
@@ -50,7 +50,7 @@ class FileSystemDao {
 
         FileSystemEntity.insertMany(fileSystems, function(err, results){
             if (err) {
-                //handleException.logMessageWithError("saveFiles", "FileSystemEntity.insertMany", err);
+                handleException.logMessageWithError("saveFiles", "FileSystemEntity.insertMany", err);
             }
 
             callback(err, results);
@@ -60,7 +60,7 @@ class FileSystemDao {
     findFileSystemById(fileId, callback) {
         FileSystemEntity.findById(fileId,function(err, fileSystemEntity){
             if (err) {
-                //handleException.logMessageWithError("findFileSystemById", "FileSystemEntity.findById", err);
+                handleException.logMessageWithError("findFileSystemById", "FileSystemEntity.findById", err);
                 throw err;
             }
 
@@ -71,7 +71,7 @@ class FileSystemDao {
     deleteFileSystemById(fileId) {
         FileSystemEntity.findByIdAndRemove(fileId, function(err){
             if (err) {
-                //handleException.logMessageWithError("deleteFileSystemById", "FileSystemEntity.findByIdAndRemove", err);
+                handleException.logMessageWithError("deleteFileSystemById", "FileSystemEntity.findByIdAndRemove", err);
                 throw err;
             }
         });
