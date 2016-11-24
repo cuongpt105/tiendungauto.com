@@ -1,8 +1,6 @@
-"use strict";
-
 var logger = require('../util/logger');
 
-module.exports = class HandleException {
+class HandleException {
     constructor(className){
         this.className = className;
     }
@@ -17,3 +15,5 @@ module.exports = class HandleException {
         logger.error(fullMessage);
     }
 }
+
+module.exports = HandleException;

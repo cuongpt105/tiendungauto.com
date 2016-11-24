@@ -1,5 +1,3 @@
-"use strict";
-
 var HandleException = require('../util/HandleException');
 
 var FileSystemEntity = require('../entity/file-system.entity');
