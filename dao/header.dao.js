@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 var HeaderEntity = require('../entity/header.entity');
 
 var handleException = new HandleException("HeaderDao");

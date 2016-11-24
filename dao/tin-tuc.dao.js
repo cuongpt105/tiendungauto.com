@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 var TinTucEntity = require('../entity/tin-tuc.entity');
 
 var handleException = new HandleException("TinTucDao");

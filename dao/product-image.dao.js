@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 var ProductImageEntity = require('../entity/product-image.entity');
 
 var handleException = new HandleException("ProductImageDao");

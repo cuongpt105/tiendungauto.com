@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 var DichVuEntity = require('../entity/dich-vu.entity');
 
 var handleException = new HandleException("DichVuDao");

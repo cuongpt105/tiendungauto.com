@@ -1,4 +1,4 @@
-var HandleException = require('../util/HandleException');
+var HandleException = require('../util/handleException');
 var ThanhToanEntity = require('../entity/thanh-toan.entity');
 
 var handleException = new HandleException("ThanhToanDao");
