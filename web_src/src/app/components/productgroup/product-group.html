@@ -24,11 +24,14 @@
 
 <div class="no-margin col-md-12 product-content-panel">
     <div class="product-item" *ngFor="let product of products">
-        <img *ngIf="product.mainImage" src="{{prorduct.mainImage.pathFile}}" 
-            class="col-md-12 product-img-thumb" (click)="detailProduct(product)"/>
+        <div class="col-md-12 product-img-thumb">
+            <img *ngIf="product.mainImage" src="{{product.mainImage.pathFile}}" 
+            class="img-responsive" (click)="detailProduct(product)"/>
+        </div>
+        
         
         <h3 class="col-md-12 product-name">
-            <a routerLink="/san-pham/{{product.id}}" class="product-name-link">LG Smart Phone LP68</a>
+            <a routerLink="/san-pham/{{product.id}}" class="product-name-link">{{product.name}}</a>
         </h3>
 
         <div class="col-md-12 product-rating">
