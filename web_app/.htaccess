@@ -3,17 +3,7 @@ Options +FollowSymLinks
 <IfModule mod_rewrite.c>
   Options Indexes FollowSymLinks
   RewriteEngine On
-  RewriteBase /trang-chu/
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
-
-<IfModule mod_rewrite.c>
-  Options Indexes FollowSymLinks
-  RewriteEngine On
-  RewriteBase /admin/
+  RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
