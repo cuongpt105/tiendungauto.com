@@ -10,8 +10,8 @@ var compression         = require('compression');
 
 app.use(compression());
 //mongodb://<dbuser>:<dbpassword>@ds015953.mlab.com:15953/mongo-example-test
-mongoose.connect('mongodb://cuongpt105:123456@ds015953.mlab.com:15953/mongo-example-test'); // connect to our database
-//mongoose.connect('mongodb://localhost/mongo_db_test');
+//mongoose.connect('mongodb://cuongpt105:123456@ds015953.mlab.com:15953/mongo-example-test'); // connect to our database
+mongoose.connect('mongodb://localhost/tien_dung_auto_db');
 
 mongoose.connection.on('connected', function () {  
   console.log('Mongoose default connection open to ');

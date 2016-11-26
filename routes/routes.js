@@ -1,5 +1,3 @@
-var bearRoutes = require('./bear.routes.js');
-var employeeRoutes = require('./employee.routes.js');
 var headerRoutes = require('./header.routes.js');
 var gioithieuRoutes = require('./gioi-thieu.routes.js');
 var bandoRoutes = require('./ban-do.routes.js');
@@ -28,8 +26,6 @@ module.exports = (app, router) => {
     danhmucRoutes(app, router);
     productRoutes(app, router);
     productImageRoutes(app, router);
-    bearRoutes(app, router);
-    employeeRoutes(app, router);
 
     app.use('/api', router);
 
