@@ -1,0 +1,65 @@
+<div class="container header-holder">
+    <div class="col-md-3 logo-holder">
+        <img *ngIf="header.file" class="img-responsive header-image" src="{{header.file.pathFile}}"/>
+    </div>
+    
+    <div class="col-md-6 search-holder">
+        <!-- contact line -->
+        <div class="contact-row">
+            <div class="phone inline">
+                <i class="icon fa fa-phone"></i> 
+                <span>090 709 99 22</span>
+            </div>
+            <div class="address inline">
+                <i class="icon fa fa-home"></i>
+                <span>50/9 Truông tre, KP Nhị đồng 2, TX Dĩ An, Bình Dương</span>
+            </div>
+        </div>
+
+        <!-- search input line -->
+        <div class="search-area">
+            <div class="control-group">
+                <input class="search-field" placeholder="Tìm sản phẩm ờ đây...">
+                <a class="search-button" href="#"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- cart holder -->
+    <div class="no-margin col-md-3 cart-holder">
+        <div class="dropdown-cart pull-right">
+            <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                <div class="items-cart-inner">
+                    <div class="total-price-basket">
+                        <span class="total-price">
+                            <span class="value">0</span>
+                            <span class="sign">đ</span>
+                        </span>
+                    </div>
+
+                    <div class="basket">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                    </div>
+
+                    <div class="basket-item-count"><span class="count">0</span></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="header-nav">
+    <div class="container">
+        <ul class="topnav" [ngClass]="{responsive:isResponsive}" >
+            <li *ngFor="let item of menuItems">
+                <a [ngClass]="{active:(item.name === menuItemSelected.name)}" [routerLink]="[item.linkRef]"
+                    (click)="onMenuItemSelected(item)">{{item.value}}</a>
+            </li>
+            <li class="icon">
+                <a href="javascript:void(0);" (click)="expandCollapseMenu()">☰</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="clearfix"></div>

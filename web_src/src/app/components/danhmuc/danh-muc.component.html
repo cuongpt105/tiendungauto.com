@@ -1,0 +1,10 @@
+<div class="no-margin col-md-12 carousel-panel" *ngIf="galleries.length > 0">
+    <carousel [carousels]="galleries" [total]="galleries.length"></carousel>
+</div>
+
+<div class="no-margin col-md-12">
+    <product-group [isShowSort]="true" [title]="current.name" [total]="totalProduct" 
+        [limit]="limit" [currentPage]="currentPage" [products]="products"
+        (onSortChange)="onSortChange($event)" (onPageChange)="onPageChange($event)">
+    </product-group>
+</div>

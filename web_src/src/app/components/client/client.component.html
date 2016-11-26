@@ -1,0 +1,31 @@
+<!-- Start Header -->
+<header-customize></header-customize>
+<!-- End Header -->
+
+<!-- BREAD CRUMB -->
+<div class="breadcrumb">
+    <div class="container">
+        <bread-crumb></bread-crumb>
+    </div>
+</div>
+
+<!-- Main content that include side bar in left side -->
+<div class="body-content outer-top-xs">
+    <div class="container">
+        <div class="row outer-bottom-sm">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <side-bar></side-bar>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="col-md-9 main-content-panel">
+                <!-- CONTENT -->
+                <router-outlet></router-outlet>
+            </div>
+            <!-- END MAIN CONTENT -->
+        </div>
+    </div>
+</div>  
+
+<!-- FOOTER -->
+<footer-customize></footer-customize> 

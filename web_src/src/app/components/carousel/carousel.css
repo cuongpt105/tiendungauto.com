@@ -1,0 +1,95 @@
+.carousel-container {
+    position: relative; 
+    margin: 0 auto; 
+    top: 0px; 
+    left: 0px;  
+    overflow: hidden; 
+    border-radius: 5px;
+}
+
+.carousel-content {
+    cursor: default; 
+    position: relative; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: none;
+    left: 0px;  
+    transition: all 1000ms ease;
+}
+
+.carousel-wrapper.display {
+    display: block;
+}
+
+.carousel-wrapper, .carousel-item {
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+
+.horizontal-carousel {
+    display: block;
+    background: #f7f7f7;
+}
+
+.image-carousel-item {
+    margin: 0 auto;
+    max-height: 300px;
+}
+
+
+/* effect for bullet navigate */
+.bullet-navigate-panel {
+    bottom: 17px; 
+    height: 13px;
+    position: absolute;
+}
+
+.bullet-item {
+    width: 13px;
+    height: 13px;
+}
+
+.bullet-navigate-panel div, .bullet-navigate-panel div:hover, .bullet-navigate-panel .av {
+    background: url(../../icon/bullet_navigate.png) no-repeat;
+    cursor: pointer;
+    height: 13px;
+    overflow: hidden;
+    position: absolute;
+    width: 13px;
+}
+
+.bullet-navigate-panel div:hover, .bullet-navigate-panel .av {
+    background-position: left bottom;
+}
+
+/* effect for arrow navigate */
+.arrow-left {
+    left: 15px; 
+    background: url(../../icon/arrow_left.png) left top no-repeat;
+}
+
+.arrow-right {
+    right: 15px;
+    background: url(../../icon/arrow_right.png) left top no-repeat;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-position: left bottom;
+}
+
+.arrow-left, .arrow-right {
+    width: 22px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+}

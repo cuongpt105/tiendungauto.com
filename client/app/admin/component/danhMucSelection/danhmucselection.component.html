@@ -1,6 +1,0 @@
-<div class="row" *ngFor="let danhmuc of danhmucs"> 
-    <div [ngClass]="['dm-level-'+danhmuc.level]" class="dm-name" (click)="selectDanhMuc(danhmuc)">{{danhmuc.name}}</div>
-
-    <danh-muc-selection [danhmucs]="danhmuc.children"
-        (onSelection)="selectDanhMuc($event)"></danh-muc-selection>
-</div>
