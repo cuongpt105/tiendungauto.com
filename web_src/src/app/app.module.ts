@@ -18,8 +18,7 @@ import {AdminModule} from './admin/admin.module';
   declarations: [ AppComponent],
 
   providers: [
-    appRoutingProviders,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    appRoutingProviders
   ],
 
   bootstrap:    [ AppComponent ]
