@@ -23,6 +23,6 @@
   margin-bottom: 0px;
 }
 
-.rating > input:checked ~ label { 
+.rating > label.start-active { 
     color: #FFD700;  
 }

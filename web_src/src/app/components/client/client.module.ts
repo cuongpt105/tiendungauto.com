@@ -41,6 +41,9 @@ import { DanhMucBroadcast } from '../../broadcast/danh-muc-broadcast.service';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
 
+// list pipe
+import { SimpleNumberPipe } from '../../pipe/simple-number.pipe';
+
 import { MenuService} from '../../services/menu.service';
 import { HeaderInfoService } from '../../services/header-info.service';
 
@@ -80,7 +83,10 @@ import { HeaderInfoService } from '../../services/header-info.service';
 
     DanhMucComponent,
     ProductGroupComponent,
-    ProductComponent
+    ProductComponent,
+
+    // for list pipe
+    SimpleNumberPipe
   ],
   
   providers: [

@@ -25,8 +25,9 @@
 <div class="no-margin col-md-12 product-content-panel">
     <div class="product-item" *ngFor="let product of products">
         <div class="col-md-12 product-img-thumb">
-            <img *ngIf="product.mainImage" src="{{product.mainImage.pathFile}}" 
-            class="img-responsive" (click)="detailProduct(product)"/>
+            <a routerLink="/san-pham/{{product.id}}">
+                <img *ngIf="product.mainImage" src="{{product.mainImage.pathFile}}" class="img-responsive"/>
+            </a>
         </div>
         
         
@@ -39,8 +40,8 @@
         </div>
 
         <div class="col-md-12 price-item">
-            <div class="pull-left price-sell">{{product.priceSell}} đ</div>
-            <div class="pull-right price-original text-right">{{product.priceOriginal}} đ</div>
+            <div class="pull-left price-sell">{{product.priceSell | pipeSimpleNumber}} đ</div>
+            <div class="pull-right price-original text-right">{{product.priceOriginal | pipeSimpleNumber}} đ</div>
         </div>
 
         <!-- BEGIN PRODUCT ACTION -->

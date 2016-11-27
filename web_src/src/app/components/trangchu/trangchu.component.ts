@@ -34,9 +34,12 @@ export class TrangChuComponent implements OnInit {
         this.products = [];
         this.galleries = [];
         this.updateInformationCommon();
-        this.productService.getLatestProductsActiveBySpecifyField(12, "date desc")
+        this.productService.getLatestProductsActiveBySpecifyField(12, 'date desc')
             .subscribe(products => {
                 this.products = products;
+                for (let product of products) {
+                    product.rating = 4;
+                }
             });
 
         // service to get gallery and convert this one to gallery on client

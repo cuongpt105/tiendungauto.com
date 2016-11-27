@@ -1,0 +1,28 @@
+.footer-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    margin-top: 20px;
+    background: url(../images/bg-footer.jpg);
+    padding-bottom: 10px;
+}
+
+.footer-container .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-container ul li {
+    background: url(../images/icon.png) 0 5px no-repeat;
+    padding-left: 25px;
+    color: #fff;
+}
+
+.footer-container ul li a {
+    color: #fff;
+}
