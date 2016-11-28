@@ -54,7 +54,6 @@ module.exports = (app, router) => {
                     res.status(400).send(err);
                 }
                 
-                console.log("=============thanh toan test from get:"+JSON.stringify(thanhtoan));
                 res.json(thanhtoan);
             })
         });

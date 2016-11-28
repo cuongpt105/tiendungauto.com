@@ -52,6 +52,14 @@ var router = express.Router();
 routes(app, router);
 //app.use('/api', router);
 
+// CATCH UNCAUGHT EXCEPTION
+// =============================================================================
+process.on('uncaughtException', function (err) {
+  console.log( " UNCAUGHT EXCEPTION " );
+  console.log( "[Inside 'uncaughtException' event] " + err.stack || err.message );
+});
+
+
 // START THE SERVER
 // =============================================================================
 var port = process.env.PORT || 3008;        // set our port

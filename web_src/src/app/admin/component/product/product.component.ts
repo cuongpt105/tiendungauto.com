@@ -77,16 +77,23 @@ export class ProductComponent implements OnInit {
     }
 
     saveProduct(product: Product) {
-        this.productService.saveProduct(product).subscribe(pd => {
-            if (this.isCreate) {
-                this.products = this.productService.addProductInList(this.products, pd);
-            } else {
-                this.products = this.productService.updateProductInList(this.products, pd);
+        this.productService.saveProduct(product).subscribe(
+            pd => {
+                if (this.isCreate) {
+                    this.products = this.productService.addProductInList(this.products, pd);
+                } else {
+                    this.products = this.productService.updateProductInList(this.products, pd);
+                }
+                console.log();
+                this.isView = false;
+                this.isCreate = false;
+                this.isHideList = false;
+            },
+
+            err => {
+                console.log("==========Error during save product");
             }
-            this.isView = false;
-            this.isCreate = false;
-            this.isHideList = false;
-        });
+        );
     }
 
     cancelProduct(product: Product) {
