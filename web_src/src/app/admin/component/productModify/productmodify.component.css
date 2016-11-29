@@ -1,0 +1,25 @@
+.list-product-image-panel {
+    margin-top: 10px;
+}
+
+.product-image-item {
+    float: left;
+}
+
+.image-file {
+    height: 20px;
+}
+
+.tab-value-info {
+    margin: 10px 0px 10px 0px;
+}
+
+.image-item-panel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-item-panel.active {
+    background-color: lightblue;
+}
