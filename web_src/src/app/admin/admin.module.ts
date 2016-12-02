@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import {routing} from './admin.routing';
 import {CheckboxModule} from 'primeng/primeng';
 import {TabViewModule} from 'primeng/primeng';
-import {EditorModule,SharedModule} from 'primeng/primeng'; 
+import {EditorModule,SharedModule, DialogModule} from 'primeng/primeng'; 
 
 import { AdminComponent }  from './component/admin.component';
 import {HeaderComponent} from './component/header/header.component';
@@ -53,7 +53,8 @@ import { BanDoService} from './service/bando.service';
     routing,
     CheckboxModule,
     TabViewModule,
-    EditorModule,SharedModule],
+    EditorModule,SharedModule,
+    DialogModule],
   declarations: [ 
     AdminComponent, 
     HeaderComponent, 

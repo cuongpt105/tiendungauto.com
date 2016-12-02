@@ -1,0 +1,7 @@
+.gallery-panel {
+    padding: 10px;
+}
+
+.gallery-item-body:hover {
+    background-color: gray;
+}

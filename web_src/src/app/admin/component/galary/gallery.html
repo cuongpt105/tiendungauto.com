@@ -1,0 +1,94 @@
+<div class="gallery-panel">
+    <div class="gallery-list-panel" *ngIf="!isView and !isModify">
+        <div class="no-margin col-md-12 btn-add-group">
+            <button class="btn btn-default pull-right" (click)="createGallery()">Tạo mới Gallery</button>
+        </div>
+
+        <div class="no-margin col-md-8 gallery-list-header">
+            <div class="col-md-3 image-header">
+                Hình ảnh
+            </div>
+
+            <div class="col-md-5">Tên sản phẩm</div>
+            <div class="col-md-2">Mô tả</div>
+            <div class="col-md-1">Vị trí</div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <!-- content -->
+        <div class="no-margin col-md-8 gallery-item-body" *ngFor="let gallery of galleries">
+            <div class="col-md-3 image-header">
+                <img class="img-responsive" src="{{gallery.image.pathFile}}" width="100"/>
+            </div>
+
+            <div class="col-md-5">#{{gallery.product.name}}</div>
+            <div class="col-md-2">#{{gallery.title}}</div>
+            <div class="col-md-1">#{{gallery.position}}</div>
+            <div class="col-md-1">
+                <div class="pull-right">
+                    <i class="fa fa-eye fa-lg" title="Xem chi tiết" (click)="viewGallery(gallery)"></i>
+                    <i class="fa fa-pencil fa-lg" title="Chỉnh sửa gallery" (click)="editGallery(gallery)"></i>
+                    <i class="fa fa-trash-o fa-lg" title="Xóa gallery" (click)="deleteGallery(gallery)"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-view-panel" *ngIf="isView">
+        <div class="image-view col-md-12">
+            <img class="img-responsive" src="{{gallery.image.pathFile}}" height="200"/>
+        </div>
+
+        <div class="col-md-3">Vị trí:</div>
+        <div class="col-md-9">#{{gallery.position}}</div>
+
+        <div class="col-md-3">Sản phẩm:</div>
+        <div class="col-md-9">#{{gallery.product.name}}</div>
+
+        <div class="col-md-3">Mô tả:</div>
+        <div class="col-md-9">#{{gallery.title}}</div>
+
+        <div class="no-margin col-md-12 button-group">
+            <button class="btn btn-default btn-back pull-right" (click)="cancelGallery()">Back</button>
+        </div>
+    </div>
+
+    <div class="gallery-modify-panel" *ngIf="isModify">
+
+
+        <div class="col-md-3">Vị trí:</div>
+        <div class="col-md-9">
+            <input [(ngModel)]="gallery.position"/>
+        </div>
+
+        <div class="col-md-3">Sản phẩm:</div>
+        <div class="col-md-9">
+            <span>#{{gallery.product.name}}</span>
+            <i class="fa fa-eye fa-lg" title="Chọn sản phẩm" (click)="updateProduct()"></i>
+        </div>
+
+        <div class="col-md-3">Mô tả:</div>
+        <div class="col-md-9">
+            <input [(ngModel)]="gallery.title"/>
+        </div>
+
+        <div class="no-margin col-md-12 button-group pull-right">
+            <button class="btn btn-default btn-cancel" (click)="cancelGallery()">Hủy</button>
+            <button class="btn btn-default btn-save" (click)="saveGallery()">Lưu</button>
+        </div>
+    </div>
+
+    <div class="gallery-dialog">
+        <p-dialog header="Chọn sản phẩm" [(visible)]="isShowProduct" modal="modal" width="300" responsive="true">
+                <div class="dialog-body">
+                    
+                </div>
+                <footer>
+                    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                        <button type="button" pButton icon="fa-close" (click)="cancelProduct()" label="Hủy"></button>
+                        <button type="button" pButton icon="fa-check" (click)="finishSelectProduct()" label="Chọn"></button>
+                    </div>
+                </footer>
+        </p-dialog>
+    </div>
+</div>
