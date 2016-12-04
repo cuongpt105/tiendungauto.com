@@ -10,10 +10,15 @@
 
 .header-product-name {
     margin-top: 0px;
+    margin-bottom: 0px;
     line-height: 1.3em;
     font-size: 24px;
     color: #333;
     font-family: Arial,Helvetica,sans-serif;
+}
+
+.header-product-name > .product-code {
+    font-size: 12px;
 }
 
 .product-rating {
@@ -67,4 +72,8 @@
 /* FOR DESCRIPTION */
 .product-detail-panel {
     margin-top: 30px;
+}
+
+.tab-pane > div {
+    margin-top: 10px;
 }

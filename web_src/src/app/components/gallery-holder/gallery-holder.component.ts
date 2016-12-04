@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ElementRef, AfterViewInit } from '@angular/core';
 
-import { Gallery } from '../../models/gallery';
+import { Gallery } from '../../admin/model/gallery';
 
 declare var $:any;
 
@@ -37,7 +37,7 @@ export class GalleryHolderComponent implements OnInit {
         this.isShowRightBtnThumb = true;
 
         this.getSizeOfImageThumb();
-        this.currentGallery = new Gallery("","","", "");
+        this.currentGallery = new Gallery("", null, null);
         this.updateInitData(this.galleries);
         this.updateBtnThumb();
     }

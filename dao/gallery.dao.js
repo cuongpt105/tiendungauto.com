@@ -38,4 +38,4 @@ class GalleryDao {
     }
 }
 
-module.exports = new HeaderDao();
+module.exports = new GalleryDao();

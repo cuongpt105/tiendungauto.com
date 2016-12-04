@@ -13,7 +13,7 @@ const SIDEBAR_ITEMS: SideBarItem[] = [
     {name: 'lienhe', value: 'Lien He', linkRef: '/admin/lienhe', iconClass: 'fa-tachometer'},
     {name: 'danhmuc', value: 'Danh Muc', linkRef: '/admin/danhmuc', iconClass: 'fa-tachometer'},
     {name: 'sanpham', value: 'San Pham', linkRef: '/admin/sanpham', iconClass: 'fa-tachometer'},
-    {name: 'galary', value: 'Galary', linkRef: '/admin/galary', iconClass: 'fa-tachometer'},
+    {name: 'gallery', value: 'Gallery', linkRef: '/admin/gallery', iconClass: 'fa-tachometer'},
 ];
 
 @Injectable()

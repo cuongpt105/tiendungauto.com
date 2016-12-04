@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: 'pipeSimpleNumber'})
+@Pipe({
+  name: 'pipeSimpleNumber',
+  pure: false
+})
 export class SimpleNumberPipe implements PipeTransform {
   transform(value: number): string {
     let result: string = ""+value;

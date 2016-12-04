@@ -3,6 +3,8 @@ import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MainPipeModule } from '../../pipe/main-pipe.module';
+
 import {routing} from './client.routing';
 import {CheckboxModule} from 'primeng/primeng';
 import {TabViewModule} from 'primeng/primeng';
@@ -41,11 +43,9 @@ import { DanhMucBroadcast } from '../../broadcast/danh-muc-broadcast.service';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
 
-// list pipe
-import { SimpleNumberPipe } from '../../pipe/simple-number.pipe';
-
 import { MenuService} from '../../services/menu.service';
 import { HeaderInfoService } from '../../services/header-info.service';
+import { GalleryService } from '../../admin/service/gallery.service';
 
 @NgModule({
   imports:      [ 
@@ -57,7 +57,8 @@ import { HeaderInfoService } from '../../services/header-info.service';
     TabViewModule,
 
     // import module from primeface
-    EditorModule,SharedModule, PaginatorModule
+    EditorModule,SharedModule, PaginatorModule,
+    MainPipeModule.forRoot()
   ],
 
   declarations: [ 
@@ -83,10 +84,7 @@ import { HeaderInfoService } from '../../services/header-info.service';
 
     DanhMucComponent,
     ProductGroupComponent,
-    ProductComponent,
-
-    // for list pipe
-    SimpleNumberPipe
+    ProductComponent
   ],
   
   providers: [
@@ -98,7 +96,8 @@ import { HeaderInfoService } from '../../services/header-info.service';
     InformationCommonHandle,
 
     MenuService,
-    HeaderInfoService
+    HeaderInfoService,
+    GalleryService
   ]
 })
 

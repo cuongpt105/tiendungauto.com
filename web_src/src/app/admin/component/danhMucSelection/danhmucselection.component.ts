@@ -15,11 +15,16 @@ export class DanhMucSelectionComponent implements OnInit{
     @Output()
     private onSelection: EventEmitter<DanhMuc> = new EventEmitter<DanhMuc>();
 
+    private currentDanhMuc: DanhMuc;
+
     constructor(){}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.currentDanhMuc = new DanhMuc();
+    }
 
     selectDanhMuc(danhmuc: DanhMuc) {
+        this.currentDanhMuc = danhmuc;
         this.onSelection.emit(danhmuc);
     }
 }

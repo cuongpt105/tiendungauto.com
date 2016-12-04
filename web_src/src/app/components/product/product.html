@@ -4,13 +4,21 @@
     </div>
 
     <div class="no-margin col-md-7 product-short-information-panel">
-        <h1 class="header-product-name">{{product.name}}</h1>
+        <h1 class="header-product-name">
+            {{product.name}}
+            <div class="no-margin col-md-12 product-code">
+                {{product.code}}
+            </div>    
+        </h1>
+        
 
         <div class="no-margin col-md-12 product-rating">
             <rating [value]="productRating" [numberTimeRating]="0" (onRating)="onChangeRating($event)"></rating>
         </div>
 
-        <div class="product-code">Mã sản phẩm: {{product.code}}</div>
+        <div class="product-short-description" *ngIf="(product.shortDescription && product.shortDescription.length > 0)">
+            <div [innerHTML]="product.shortDescription"></div>
+        </div>
 
         <div class="product-producer">Nhà sản xuất: {{product.producer}}</div>
 
@@ -42,19 +50,13 @@
 <div class="no-margin col-md-12 product-detail-panel">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#productInformationDetail">Chi tiết sản phẩm</a></li>
-        <li><a data-toggle="tab" href="#productTechnicalDetail">Thông tin kỹ thuật</a></li>
         <li><a data-toggle="tab" href="#productFeedback">Đánh giá sản phẩm</a></li>
     </ul>
 
     <div class="tab-content">
         <div id="productInformationDetail" class="tab-pane fade in active">
-            <div class="product-info-detail">
+            <div class="no-margin row product-info-detail">
                 <div [innerHTML]="product.detailDescription"></div>
-            </div>
-        </div>
-        <div id="productTechnicalDetail" class="tab-pane fade">
-            <div class="product-technial-detail">
-                <div [innerHTML]="product.shortDescription"></div>
             </div>
         </div>
         <div id="productFeedback" class="tab-pane fade">

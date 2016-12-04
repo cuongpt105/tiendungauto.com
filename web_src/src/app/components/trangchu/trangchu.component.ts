@@ -4,12 +4,13 @@ import { MenuItem } from '../../models/menu-item';
 import { HeaderInfo } from '../../models/header-info'; 
 import { BreadCrumbInfo } from '../../models/bread-crumb-info';
 import { Product } from '../../admin/model/product';
-import { Gallery } from '../../models/gallery';
+import { Gallery } from '../../admin/model/gallery';
 
 import { MenuService } from '../../services/menu.service';
 import { HeaderInfoService } from '../../services/header-info.service';
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
-import { ProductService } from '../../admin/service/product.service'; 
+import { ProductService } from '../../admin/service/product.service';
+import { GalleryService } from '../../admin/service/gallery.service'; 
 import { GalleryUtil } from '../../util/gallery-util';
 
 @Component({
@@ -27,7 +28,8 @@ export class TrangChuComponent implements OnInit {
         private menuService: MenuService,
         private headerInfoService: HeaderInfoService,
         private informationCommonHandle: InformationCommonHandle,
-        private productService: ProductService
+        private productService: ProductService,
+        private galleryService: GalleryService
     ) {}
 
     ngOnInit() {
@@ -42,8 +44,7 @@ export class TrangChuComponent implements OnInit {
                 }
             });
 
-        // service to get gallery and convert this one to gallery on client
-        this.galleries = GalleryUtil.convertToGalleryFromImageGallery();
+        this.galleryService.getGalleries().subscribe(galleries => this.galleries = galleries);
     }
 
     private updateInformationCommon() {

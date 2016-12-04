@@ -51,6 +51,11 @@ export class ProductModifyComponent implements OnInit {
 			});
 		}
 	}
+
+	public options: Object = { 
+		placeholderText: 'Edit Your Content Here!',
+		charCounterCount: false
+	}
 	
 	fileChangeEvent(fileInput: any) {
         this.filesToUpload = [];

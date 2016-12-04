@@ -7,4 +7,10 @@ export class Gallery {
     title: String;
     image: FileSystem;
     product: Product;
+
+    constructor(title:String, image: FileSystem, product: Product) {
+        this.title = title;
+        this.image = image;
+        this.product = product;
+    }
 }

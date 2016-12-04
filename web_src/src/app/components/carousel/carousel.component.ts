@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, AfterViewInit, ElementRef, NgZone } from '@angular/core';
 
-import { Gallery } from '../../models/gallery';
+import { Gallery } from '../../admin/model/gallery';
 
 declare var $:any;
 
@@ -36,7 +36,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
         this.bulletNavigateLeft = 0;
         this.itemSize = 0;
         this.isDisplayCarousel = false;
-        this.current = new Gallery("", "", "", "");
+        this.current = new Gallery("", null, null);
         this.getSizeOfItem();
     }
 

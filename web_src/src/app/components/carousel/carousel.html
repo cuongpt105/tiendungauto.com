@@ -7,8 +7,8 @@
 			<div class="carousel-item" [ngClass]="{'active': (carousel === current)}"
 				[ngStyle]="{'width': itemSize+'px'}" 
 				*ngFor="let carousel of carousels">
-				<a class="horizontal-carousel" routerLink="/san-pham/{{carousel.productId}}">
-					<img src="../../{{carousel.path}}" class="image-carousel-item img-responsive">
+				<a class="horizontal-carousel" routerLink="/san-pham/{{carousel.product.id}}">
+					<img src="../../{{carousel.image.pathFile}}" class="image-carousel-item img-responsive">
 				</a>
 			</div>
 			

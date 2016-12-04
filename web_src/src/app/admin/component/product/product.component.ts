@@ -8,6 +8,7 @@ import { SidebarItemBroadcast } from '../../service/sidebar-item-broadcast.servi
 import { SideBarItemService } from '../../service/sidebar-item.service';
 import { ProductService} from '../../service/product.service';
 import { DanhMucService } from '../../service/danhmuc.service';
+import { DanhMucUtil } from '../../../util/danh-muc-util';
 
 @Component({
     selector: 'product',
@@ -48,7 +49,7 @@ export class ProductComponent implements OnInit {
         this.products = [];
 
         this.danhmucService.getDanhMucs().subscribe(dms => {   
-            this.danhmucs = dms;
+            this.danhmucs = DanhMucUtil.convertTreeDMToListDM(dms);
         });
     }
 
@@ -57,14 +58,14 @@ export class ProductComponent implements OnInit {
         this.isCreate = false;
         this.isHideList = false;
         this.allowCreate = false;
+        this.danhmucSelection = danhmuc;
 
         let hasChildren = danhmuc.children && danhmuc.children.length > 0;
         if (!hasChildren) {
             this.allowCreate = true;
-            this.danhmucSelection = danhmuc;
             this.productService.getProducts(danhmuc.id).subscribe(products => this.products = products);
         } else {
-            // show popup that this danh muc does not have product
+            this.products = [];
         }
     }
 

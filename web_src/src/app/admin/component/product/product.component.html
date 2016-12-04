@@ -1,35 +1,47 @@
 <div class="list-product-container" *ngIf="!isHideList">
     <div class="col-md-3">
-        <danh-muc-selection [danhmucs]="danhmucs" (onSelection)="selectDanhMuc($event)"></danh-muc-selection>
+        <div class="no-margin col-md-12 choose-category">
+            Chọn danh mục
+        </div>
+        <div class="no-margin col-md-12">
+            <danh-muc-selection [danhmucs]="danhmucs" (onSelection)="selectDanhMuc($event)"></danh-muc-selection>
+        </div>
     </div>
 
     <div class="col-md-9">
-        <button class="btn-add-product" (click)="addProduct()" value="Tao moi san pham" *ngIf="allowCreate"></button>
-        <div class="product-header row">
-            <div class="col-md-2">Ma SP</div>
-            <div class="col-md-4">Ten SP</div>
-            <div class="col-md-1">Gia goc</div>
-            <div class="col-md-1">Gia ban</div>
-            <div class="col-md-1">Thu tu</div>
-            <div class="col-md-1">Trang thai</div>
-            <div class="col-md-1">Don vi</div>
-            <div class="col-md-1"></div>
+        <div class="no-margin row">
+            <button class="btn-add-product pull-right" (click)="addProduct()" *ngIf="allowCreate">
+                Tạo mới sản phẩm
+            </button>
+        </div>
+        
+        <div class="no-margin row product-header">
+            <div class="no-margin col-md-2 product-code">Mã sản phẩm</div>
+            <div class="no-margin col-md-3">Ten SP</div>
+            <div class="no-margin col-md-1">Gia goc</div>
+            <div class="no-margin col-md-1">Gia ban</div>
+            <div class="no-margin col-md-1">Thu tu</div>
+            <div class="no-margin col-md-2">Trang thai</div>
+            <div class="no-margin col-md-2">Don vi</div>
         </div>
 
         <div class="product-table-content">
-            <div class="row" *ngFor="let product of products">
-                <div class="col-md-2">{{product.code}}</div>
-                <div class="col-md-4">{{product.name}}</div>
-                <div class="col-md-1">{{product.priceOriginal}}</div>
-                <div class="col-md-1">{{product.priceSell}}</div>
-                <div class="col-md-1">{{product.position}}</div>
-                <div class="col-md-1">{{product.status}}</div>
-                <div class="col-md-1">{{product.unit}}</div>
-                <div class="col-md-1">
-                    <i class="fa fa-eye fa-lg" title="Chi Tiet" (click)="viewProduct(product)"></i>
-                    <i class="fa fa-pencil fa-lg" title="Chinh Sua San Phan" (click)="editProduct(product)"></i>
-                    <i class="fa fa-trash-o fa-lg" title="Xoa San Phan" (click)="deleteProduct(product)"></i>
+            <div class="no-margin row product-item" *ngFor="let product of products">
+                <div class="no-margin col-md-2 product-code">{{product.code}}</div>
+                <div class="no-margin col-md-3">{{product.name}}</div>
+                <div class="no-margin col-md-1">{{product.priceOriginal}}</div>
+                <div class="no-margin col-md-1">{{product.priceSell}}</div>
+                <div class="no-margin col-md-1">{{product.position}}</div>
+                <div class="no-margin col-md-2">{{product.status}}</div>
+                <div class="no-margin col-md-2">
+                    {{product.unit}}
+                    <div class="pull-right btn-group-product">
+                        <i class="fa fa-eye fa-lg" title="Chi Tiet" (click)="viewProduct(product)"></i>
+                        <i class="fa fa-pencil fa-lg" title="Chinh Sua San Phan" (click)="editProduct(product)"></i>
+                        <i class="fa fa-trash-o fa-lg" title="Xoa San Phan" (click)="deleteProduct(product)"></i>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>

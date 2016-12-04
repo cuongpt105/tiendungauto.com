@@ -11,7 +11,7 @@ var FileSystemService = require('../service/file-system.service');
 var ProductService = require('../service/product.service');
 
 var handleException = new HandleException("GalleryService");
-var async = require('async');
+var fileSystemService = new FileSystemService();
 
 module.exports = class GalleryService {
     constructor() {}
@@ -48,8 +48,10 @@ module.exports = class GalleryService {
                 handleException.logMessageWithError("saveGallery", "galleryEntity.save", err);
                 callback(err);  
             } else {
-                let galleryModel = GalleryService.convertEntityToModel(entity);
-                callback(err, galleryModel);
+                GalleryEntity.populate(entity, 'image product', function(err) {
+                    let galleryModel = GalleryService.convertEntityToModel(entity);
+                    callback(err, galleryModel);
+                });
             }
         });
     }
@@ -76,13 +78,26 @@ module.exports = class GalleryService {
     }
 
     deleteGallery(galleryId, callback) {
-        GalleryEntity.remove({_id: galleryId}, function(err, galleryEntity){
+        galleryDao.getGalleryById(galleryId, function(err, galleryEntity){
             if (err) {
-                handleException.logMessageWithError("deleteGallery", "GalleryEntity.remove", err);
+                handleException.logMessageWithError("deleteGallery", "Gallery.findOne", err);
                 callback(err);
             } else {
-                console.log("=========delete success gallery:"+JSON.stringify(galleryEntity));
-                callback(err, galleryEntity);
+                if (galleryEntity) {
+                    galleryEntity.remove();
+                    fileSystemService.deleteFileSystemById(galleryEntity.image._id, function(err, isDeleted){
+                        if (err) {
+                            handleException.logMessageWithError("deleteGallery", "fileSystemService.deleteFileSystemById", err);
+                            callback(err);
+                        } else {
+                            callback(err, true);
+                        }
+                    });
+                } else {
+                    let message = "Error during delete gallery. This gallery is not existing in system. Please send this error to administrator.";
+                    handleException.logMessageWithError("deleteGallery", "Gallery.findOne", message);
+                    callback(new Error(message));
+                }
             }
         });
     }
@@ -127,7 +142,7 @@ module.exports = class GalleryService {
         for (let galleryEntity of galleryEntities) {
             if (galleryEntity) {
                 let galleryModel = GalleryService.convertEntityToModel(galleryEntity);
-                galleries.push(galleryEntity);
+                galleries.push(galleryModel);
             }
         }
 
@@ -139,8 +154,11 @@ module.exports = class GalleryService {
         let product = ProductService.convertEntityToModel(galleryEntity.product);
         product.mainImage = null;
         product.imagesDetail = [];
+        product.detailDescription = "";
+        product.danhmuc = null;
+        product.shortDescription = "";
 
-        let galleryModel = new Gallery(galleryEntity._id, galleryEntity.title, image, galleryEntity.product, galleryEntity.position);
+        let galleryModel = new Gallery(galleryEntity._id, galleryEntity.title, image, product, galleryEntity.position);
         return galleryModel;
     }
 }

@@ -6,12 +6,10 @@ import { HeaderInfo } from '../../models/header-info';
 import { MenuItem } from '../../models/menu-item';
 import { BreadCrumbInfo } from '../../models/bread-crumb-info'
 import { Product } from '../../admin/model/product';
-import { Gallery } from '../../models/gallery';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
 import { DanhMucBroadcast } from '../../broadcast/danh-muc-broadcast.service';
 import { ProductService } from '../../admin/service/product.service';
-import { GalleryUtil } from '../../util/gallery-util';
 
 @Component({
     selector: 'danh-muc',
@@ -29,7 +27,6 @@ export class DanhMucComponent implements OnInit {
     private currentPage: number;
     private fieldOrderBy: string;
     private totalProduct: number;
-    private galleries: Gallery[];
     
     constructor(
         private route: ActivatedRoute,
@@ -43,13 +40,11 @@ export class DanhMucComponent implements OnInit {
         this.limit = 12;
         this.currentPage = 0;
         this.fieldOrderBy = "date desc";
-        this.galleries = [];
 
         this.route.params.forEach((params: Params) => {
             this.danhmucId = params['id'];
 
             this.getProducts();
-            this.getGallery();
 
             if (this.danhmucs && this.danhmucs.length > 0) {
                 this.current = this.danhmucs.filter(dm => dm.id === this.danhmucId)[0];
@@ -79,10 +74,6 @@ export class DanhMucComponent implements OnInit {
     onPageChange(nextPage: number) {
         this.currentPage = nextPage;
         this.getProducts();
-    }
-
-    private getGallery() {
-        this.galleries = GalleryUtil.convertToGalleryFromImageGallery();
     }
 
     private getProducts() {

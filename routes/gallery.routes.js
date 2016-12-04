@@ -16,7 +16,7 @@ module.exports = (app, router) => {
                     handleException.logMessageWithError("POST /galleries", "galleryService.saveGallery", err);
                     res.status(500).send(err);    
                 }
-
+                
                 res.json(galleryModel);
             });
         })
@@ -56,12 +56,12 @@ module.exports = (app, router) => {
         })
 
         .delete(function(req, res){
-            galleryService.deleteGallery(req.params.gallery_id, function(err, galleryEntity){
+            galleryService.deleteGallery(req.params.gallery_id, function(err, isDeleted){
                 if (err) {
                     handleException.logMessageWithError("DELETE /galleries/:gallery_id", "galleryService.deleteGallery", err);
                     res.status(500).send(err);    
                 } else {
-                    req.status(200).send("Delete successful.");
+                     res.json(isDeleted);
                 }
             });
         });

@@ -1,0 +1,19 @@
+.dm-level-2 {
+    padding-left: 10px;
+}
+
+.dm-level-3 {
+    padding-left: 20px;
+}
+
+.dm-level-4 {
+    padding-left: 30px;
+}
+
+.dm-level-5 {
+    padding-left: 50px;
+}
+
+.danh-muc-item.active, .danh-muc-item:hover {
+    background-color: dimgray;
+}

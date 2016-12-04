@@ -1,0 +1,52 @@
+.gallery-panel {
+    padding: 10px;
+}
+
+.gallery-list-header {
+    background: #3e77ab; /* Old browsers */
+    background: -moz-linear-gradient(top, #3e77ab 0%, #54a3ee 50%, #54a3ee 51%, #3896ed 51%, #4783ba 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e77ab), color-stop(50%,#54a3ee), color-stop(51%,#54a3ee), color-stop(51%,#3896ed), color-stop(100%,#4783ba)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #3e77ab 0%,#54a3ee 50%,#54a3ee 51%,#3896ed 51%,#4783ba 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #3e77ab 0%,#54a3ee 50%,#54a3ee 51%,#3896ed 51%,#4783ba 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #3e77ab 0%,#54a3ee 50%,#54a3ee 51%,#3896ed 51%,#4783ba 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #3e77ab 0%,#54a3ee 50%,#54a3ee 51%,#3896ed 51%,#4783ba 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e77ab', endColorstr='#4783ba',GradientType=0 ); /* IE6-9 */
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    color:#FFF;
+    line-height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.button-icon i {
+    cursor: pointer;
+}
+
+.button-icon i:hover {
+    color: #3e77ab;
+}
+
+.gallery-item-body {
+    margin: 5px 0px;
+}
+
+.gallery-item-body:hover {
+    background-color: gray;
+}
+
+.category-header, .product-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ .category-item.active, .category-item:hover, .product-item.active, .product-item:hover {
+    background-color: lightskyblue;
+}
+
+.image-view .img-responsive, .image-modify .img-responsive {
+    max-height: 100px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+

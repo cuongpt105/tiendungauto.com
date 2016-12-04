@@ -11,7 +11,7 @@ import {ThanhToanComponent} from './component/thanhToan/thanhtoan.component';
 import {LienHeComponent} from './component/lienHe/lienhe.component';
 import { DanhMucComponent } from './component/danhMuc/danhmuc.component';
 import { ProductComponent } from './component/product/product.component';
-import { GalaryComponent } from './component/galary/galary.component';
+import { GalleryComponent } from './component/gallery/gallery.component';
 
 const adminRoutes: Routes  = [
     {
@@ -28,7 +28,7 @@ const adminRoutes: Routes  = [
             {path: 'lienhe', component: LienHeComponent},
             {path: 'danhmuc', component: DanhMucComponent},
             {path: 'sanpham', component: ProductComponent},
-            {path: 'galary', component: GalaryComponent}
+            {path: 'gallery', component: GalleryComponent}
         ]
     }
     

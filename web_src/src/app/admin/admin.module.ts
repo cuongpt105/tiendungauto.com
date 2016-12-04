@@ -3,6 +3,8 @@ import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MainPipeModule } from '../pipe/main-pipe.module';
+
 import {routing} from './admin.routing';
 import {CheckboxModule} from 'primeng/primeng';
 import {TabViewModule} from 'primeng/primeng';
@@ -26,9 +28,11 @@ import { ProductViewComponent } from './component/productView/productview.compon
 import { ProductModifyComponent } from './component/productModify/productmodify.component';
 import { ProductImageDetailComponent } from './component/productImageDetail/productImageDetail.component'
 
-import { GalaryComponent } from './component/galary/galary.component';
+import { GalleryComponent } from './component/gallery/gallery.component';
 
+// directive
 import {ItemHighlightDirective} from './directive/item-highlight.directive';
+import { FroalaEditorDirective, FroalaViewDirective } from '../directive/froala.directives';
 
 import { CommonBroadcast} from './service/common-broadcast.service';
 import {SidebarItemBroadcast} from './service/sidebar-item-broadcast.service';
@@ -44,6 +48,8 @@ import { DanhMucService} from './service/danhmuc.service';
 import { TinTucService} from './service/tintuc.service';
 import { TinTucFileService} from './service/tintucfile.service';
 import { BanDoService} from './service/bando.service';
+import { GalleryService } from './service/gallery.service';
+import { FileSystemService } from '../services/file-system.service';
 
 @NgModule({
   imports:      [ 
@@ -53,8 +59,8 @@ import { BanDoService} from './service/bando.service';
     routing,
     CheckboxModule,
     TabViewModule,
-    EditorModule,SharedModule,
-    DialogModule],
+    EditorModule,SharedModule, DialogModule,
+    MainPipeModule.forRoot()],
   declarations: [ 
     AdminComponent, 
     HeaderComponent, 
@@ -72,8 +78,8 @@ import { BanDoService} from './service/bando.service';
     ProductViewComponent,
     ProductModifyComponent,
     ProductImageDetailComponent,
-    GalaryComponent,
-    ItemHighlightDirective
+    GalleryComponent,
+    ItemHighlightDirective, FroalaEditorDirective, FroalaViewDirective
   ],
   providers: [
     CommonBroadcast,
@@ -89,7 +95,9 @@ import { BanDoService} from './service/bando.service';
     ProductImageService,
     TinTucService,
     TinTucFileService,
-    BanDoService
+    BanDoService,
+    GalleryService,
+    FileSystemService
   ]
 })
 

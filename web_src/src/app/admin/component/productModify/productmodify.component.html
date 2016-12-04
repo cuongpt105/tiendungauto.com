@@ -1,10 +1,10 @@
-<div class="product-modify-container">
+<div class="no-margin row product-modify-container">
     <!-- ======================= danh sach hinh anh cua san pham -->
-    <div class="product-image-panel">
-        <div class="title-for-upload-gioi-thieu"> Chọn ảnh để upload:</div>
+    <div class="no-margin row product-image-panel">
+        <div class="no-margin row title-upload-file"> Chọn ảnh để upload:</div>
         <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto" multiple/>
 
-        <div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
+        <div class="no-margin row html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
             <div class="progress-bar-wrapper">
                 <progress id="progressbar" value="{{numberOfDataUpload}}" max="100"></progress>
                 <span class="progress-value">{{numberOfDataUpload}}%</span>
@@ -12,16 +12,16 @@
         </div>
 
         <div class="no-margin row list-product-image-panel">
-            <div>Danh sach file duoc upload cho san pham nay</div>
-            <div class="no-margin row product-image-item" *ngFor="let proImage of productImages"> 
-                <div class="no-margin col-md-11">
+            <div class="no-margin row title-uploaded-file">Danh sách ảnh đã được upload cho sản phẩm.</div>
+            <div class="no-margin col-md-12 product-image-item" *ngFor="let proImage of productImages"> 
+                <div class="no-margin col-md-8">
                     <div class="no-margin col-md-2 image-file">
-                        <img class="img-responsive" src="{{proImage.file.pathFile}}" width="100px">
+                        <img class="img-responsive" src="{{proImage.file.pathFile}}">
                     </div>
                     
                     <div class="path-size col-md-4"> {{proImage.file.pathFile}}</div>
-                    <div class="file-name col-md-3"> {{proImage.file.originalName}}</div>
-                    <div class="path-size col-md-2"> {{proImage.file.size/1024}}</div>
+                    <div class="file-name col-md-4"> {{proImage.file.originalName}}</div>
+                    <div class="path-size col-md-2"> {{proImage.file.size | fileSize}}</div>
                 </div>
 
                 <div class="delete-file col-md-1">
@@ -109,14 +109,14 @@
                         </div> 
 
                         <div class="col-md-8 image-name">{{proImage.file.originalName}}</div>
-                        <div class="col-md-2 image-size">{{proImage.file.size/1024}}</div>
+                        <div class="col-md-2 image-size">{{proImage.file.size | fileSize}}</div>
                     </div>
                 </div>
             </div>
 
             <div id="shortDescription" class="tab-pane fade">
                <div class="tab-value-info">
-                    <p-editor [(ngModel)]="product.shortDescription" [style]="{'height':'320px'}"></p-editor>
+                    <div [froalaEditor]="options" [(froalaModel)]="product.shortDescription"></div>
                 </div>
             </div>
             
@@ -135,8 +135,10 @@
         </div>
     </div>
 
-    <div class="group-button">
-        <button class="btn btn-success btn-save" (click)="saveProduct()">Luu</button>
-        <button class="btn btn-danger btn-cancel" (click)="cancelProduct()">Huy</button>
+    <div class="no-margin row group-button">
+        <div class="pull-right">
+            <button class="btn btn-success btn-save" (click)="saveProduct()">Lưu</button>
+            <button class="btn btn-danger btn-cancel" (click)="cancelProduct()">Hủy</button>
+        </div>
     </div>
 </div>

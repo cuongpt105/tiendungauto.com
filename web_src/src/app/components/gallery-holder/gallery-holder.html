@@ -3,7 +3,7 @@
         <div class="owl-wrapper-outer">
             <div class="single-product-gallery-item">
                 <a data-rel="prettyphoto" href="javascript:void(0)">
-                    <img src="../../{{currentGallery.path}}" class="img-responsive">
+                    <img src="../../{{currentGallery.image.pathFile}}" class="img-responsive">
                 </a>
             </div>
         </div>
@@ -20,7 +20,7 @@
                         [ngStyle]="{'width': itemThumbSize+'px'}" 
                         *ngFor="let gallery of galleries">
                         <a class="horizontal-thumb" href="javascript:void(0)" (click)="onSelectImageThumb(gallery)">
-                            <img src="../../{{gallery.path}}" class="img-responsive">
+                            <img src="../../{{gallery.image.pathFile}}" class="img-responsive">
                         </a>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import { HeaderInfo } from '../../models/header-info';
 import { MenuItem } from '../../models/menu-item';
 import { BreadCrumbInfo } from '../../models/bread-crumb-info'
 import { Product } from '../../admin/model/product';
-import { Gallery } from '../../models/gallery';
+import { Gallery } from '../../admin/model/gallery';
 import { DanhMuc } from '../../admin/model/danhmuc';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
