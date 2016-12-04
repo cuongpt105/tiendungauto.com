@@ -101,11 +101,11 @@
     </div>
 
     <div class="gallery-dialog">
-        <p-dialog header="Chọn sản phẩm" [(visible)]="isShowProduct" modal="modal" width="300" responsive="true">
+        <p-dialog header="Chọn sản phẩm" [(visible)]="isShowProduct" modal="modal" width="450" responsive="true" >
                 <div class="dialog-body">
                     <div class="no-margin col-md-12 category-panel">
                         <div class="no-margin col-md-12 category-header"> Chọn danh mục</div>
-                        <div class="no-margin col-md-12 category-item" *ngFor="let dm of danhMucs" 
+                        <div class="no-margin col-md-12 category-item category-level-{{dm.level}}" *ngFor="let dm of danhMucs" 
                             (click)="selectionDanhMuc(dm)" [ngClass]="{'active': danhMucSelected.id === dm.id}" >
                             {{dm.name}}
                         </div>
@@ -123,8 +123,8 @@
                 </div>
                 <footer>
                     <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
-                        <button type="button" pButton icon="fa-close" (click)="cancelProduct()">Hủy</button>
-                        <button type="button" pButton icon="fa-check" (click)="finishSelectProduct()">Chọn</button>
+                        <button type="button" class="btn btn-danger btn-cancel" pButton icon="fa-close" (click)="cancelProduct()">Hủy</button>
+                        <button type="button" class="btn btn-success btn-save" pButton icon="fa-check" (click)="finishSelectProduct()">Chọn</button>
                     </div>
                 </footer>
         </p-dialog>

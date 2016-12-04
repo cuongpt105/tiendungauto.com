@@ -32,7 +32,7 @@
 }
 
 .gallery-item-body:hover {
-    background-color: gray;
+    background-color: lightskyblue;
 }
 
 .category-header, .product-header {
@@ -48,5 +48,32 @@
     max-height: 100px;
     margin-bottom: 20px;
     margin-top: 10px;
+}
+
+.dialog-body .category-panel {
+    max-height: 180px;
+    overflow:auto;
+}
+
+.dialog-body .product-dialog-panel {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow:auto;
+}
+
+.category-item.category-level-2 {
+    padding-left: 10px;
+}
+
+.category-item.category-level-3 {
+    padding-left: 20px;
+}
+
+.category-item.category-level-4 {
+    padding-left: 30px;
+}
+
+.category-item.category-level-5 {
+    padding-left: 40px;
 }
 

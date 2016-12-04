@@ -30,7 +30,7 @@
 }
 
 .product-item:hover {
-    background-color: gray;
+    background-color: lightskyblue;
 }
 
 .product-header > .product-code, .product-item > .product-code {
