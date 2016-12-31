@@ -35,6 +35,7 @@
     "@angular/router": "3.2.0",
     "core-js": "^2.4.1",
     "froala-editor": "^2.4.0-rc.1",
+    "glob": "^7.1.1",
     "ng2-froala-editor": "^1.0.14",
     "primeng": "^1.0.0-beta.16",
     "quill": "^1.0.6",

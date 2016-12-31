@@ -26,7 +26,7 @@
 </div>
 
 <div class="content-panel">
-    <p-editor [(ngModel)]="gioithieu.content" [style]="{'height':'320px'}"></p-editor>
+    <div [froalaEditor] [(froalaModel)]="gioithieu.content"></div>
     <button class="btn-cancel" (click)="cancelGioiThieu()">Huy</button>
     <button class="btn-save" (click)="saveGioiThieu()">Luu</button>
 </div>

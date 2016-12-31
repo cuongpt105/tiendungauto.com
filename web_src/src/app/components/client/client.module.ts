@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { MainPipeModule } from '../../pipe/main-pipe.module';
 
-import {routing} from './client.routing';
+import {ClientRoutingModule} from './client.routing';
 import {CheckboxModule} from 'primeng/primeng';
 import {TabViewModule} from 'primeng/primeng';
 import {EditorModule,SharedModule} from 'primeng/primeng'; 
@@ -45,14 +45,27 @@ import { InformationCommonHandle } from '../../services/information-common-handl
 
 import { MenuService} from '../../services/menu.service';
 import { HeaderInfoService } from '../../services/header-info.service';
+import { HeaderService } from '../../admin/service/header.service';
+import { UploadFileService } from '../../admin/service/upload-file.service';
+import { GioiThieuService } from '../../admin/service/gioithieu.service';
+import { DichVuService } from '../../admin/service/dichvu.service';
+import { ThanhToanService } from '../../admin/service/thanhtoan.service';
+import { ProductService} from '../../admin/service/product.service';
+import { ProductImageService} from '../../admin/service/productimage.service';
+import { DanhMucService} from '../../admin/service/danhmuc.service';
+import { TinTucService} from '../../admin/service/tintuc.service';
+import { TinTucFileService} from '../../admin/service/tintucfile.service';
+import { BanDoService} from '../../admin/service/bando.service';
 import { GalleryService } from '../../admin/service/gallery.service';
+import { FileSystemService } from '../../services/file-system.service';
 
 @NgModule({
   imports:      [ 
     CommonModule, 
     FormsModule, 
     HttpModule, 
-    routing,
+    ClientRoutingModule,
+
     CheckboxModule,
     TabViewModule,
 
@@ -97,7 +110,20 @@ import { GalleryService } from '../../admin/service/gallery.service';
 
     MenuService,
     HeaderInfoService,
-    GalleryService
+    GalleryService,
+    HeaderService,
+    UploadFileService,
+    GioiThieuService,
+    DichVuService,
+    ThanhToanService,
+    DanhMucService,
+    ProductService,
+    ProductImageService,
+    TinTucService,
+    TinTucFileService,
+    BanDoService,
+    GalleryService,
+    FileSystemService
   ]
 })
 

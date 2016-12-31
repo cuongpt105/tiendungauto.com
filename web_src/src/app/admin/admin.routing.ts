@@ -1,4 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import {AdminComponent} from './component/admin.component';
 import {HeaderComponent} from './component/header/header.component';
@@ -13,9 +14,9 @@ import { DanhMucComponent } from './component/danhMuc/danhmuc.component';
 import { ProductComponent } from './component/product/product.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
 
-const adminRoutes: Routes  = [
-    {
-        path: 'admin', component: AdminComponent,
+@NgModule({
+  imports: [RouterModule.forChild([
+    {path: '', component: AdminComponent,
         children: [
             {path: '', component: GioiThieuComponent},
             {path: 'gioithieu', component: GioiThieuComponent},
@@ -31,7 +32,7 @@ const adminRoutes: Routes  = [
             {path: 'gallery', component: GalleryComponent}
         ]
     }
-    
-];
-
-export const routing = RouterModule.forChild(adminRoutes);
+  ])],
+  exports: [RouterModule]
+})
+export class AdminRoutingModule {}

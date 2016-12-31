@@ -82,4 +82,9 @@ export class GioiThieuComponent implements OnInit {
             this.files = gioithieu.files;
         });
     }
+
+    public options: Object = { 
+		placeholderText: 'Edit Your Content Here!',
+		charCounterCount: false
+	}
 }

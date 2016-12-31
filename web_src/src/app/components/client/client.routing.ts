@@ -1,4 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { ClientAppComponent } from './client.component';
 import {TrangChuComponent} from '../trangchu/trangchu.component';
@@ -11,15 +12,11 @@ import {LienHeComponent} from '../lienhe/lien-he.component';
 import { DanhMucComponent } from '../danhmuc/danh-muc.component';
 import { ProductComponent } from '../product/product.component';
 
-const clientRoutes: Routes  = [
-    {
-        path: '',
-        redirectTo: '/trang-chu',
-        pathMatch: 'full'
-    },
-    {
-        path: '', component: ClientAppComponent,
+@NgModule({
+  imports: [RouterModule.forChild([
+    { path: '', component: ClientAppComponent,
         children: [
+            {path: '', component: TrangChuComponent},
             {path: 'trang-chu', component: TrangChuComponent},
             {path: 'gioi-thieu', component: GioiThieuComponent},
             {path: 'dich-vu', component: DichVuComponent},
@@ -32,7 +29,7 @@ const clientRoutes: Routes  = [
             {path: 'san-pham/:id', component: ProductComponent }
         ]
     }
-    
-];
-
-export const routing = RouterModule.forChild(clientRoutes);
+  ])],
+  exports: [RouterModule]
+})
+export class ClientRoutingModule {}

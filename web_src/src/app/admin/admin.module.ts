@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { MainPipeModule } from '../pipe/main-pipe.module';
 
-import {routing} from './admin.routing';
+import {AdminRoutingModule} from './admin.routing';
 import {CheckboxModule} from 'primeng/primeng';
 import {TabViewModule} from 'primeng/primeng';
 import {EditorModule,SharedModule, DialogModule} from 'primeng/primeng'; 
@@ -56,7 +56,8 @@ import { FileSystemService } from '../services/file-system.service';
     CommonModule, 
     FormsModule, 
     HttpModule, 
-    routing,
+    AdminRoutingModule,
+    
     CheckboxModule,
     TabViewModule,
     EditorModule,SharedModule, DialogModule,

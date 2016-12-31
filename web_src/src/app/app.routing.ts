@@ -1,9 +1,22 @@
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const appRoutes: Routes  = [
+export const routes: Routes = [
+  {path: 'admin', loadChildren: () => new Promise(resolve => {
+            (require as any).ensure([], require => {
+                resolve(require('./admin/admin.module').AdminModule);
+            })
+        })},
+
+    {path: '',  loadChildren: () => new Promise(resolve => {
+            (require as any).ensure([], require => {
+                resolve(require('./components/client/client.module').ClientModule);
+            })
+        })}
 ];
 
-export const appRoutingProviders: any[] = [
-];
-
-export const routing = RouterModule.forRoot(appRoutes);
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

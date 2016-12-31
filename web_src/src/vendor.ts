@@ -12,3 +12,12 @@ import '@angularclass/hmr';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
+// import all css files
+import './css/font-awesome.min.css';
+import './css/bootstrap.min.css';
+import './css/bootstrap-theme.min.css';
+
+import './../node_modules/primeng/resources/themes/omega/theme.css';
+import './../node_modules/primeng/resources/primeng.min.css';
+
+import './css/styles.css';

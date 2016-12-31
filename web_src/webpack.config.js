@@ -1,7 +1,7 @@
 // Helper: root() is defined at the bottom
 var path = require('path');
 var webpack = require('webpack');
-
+var glob = require('glob');
 // Webpack Plugins
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var autoprefixer = require('autoprefixer');
@@ -48,6 +48,34 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#entry
    */
   config.entry = isTest ? {} : {
+    'library': [
+      './src/js/jquery.min.js',
+      './src/js/bootstrap.min.js',
+      './src/js/froala-editor/js/froala_editor.min.js',
+      './src/js/froala-editor/js/plugins/align.min.js',
+      './src/js/froala-editor/js/plugins/char_counter.min.js',
+      './src/js/froala-editor/js/plugins/code_beautifier.min.js',
+      './src/js/froala-editor/js/plugins/code_view.min.js',
+      './src/js/froala-editor/js/plugins/colors.min.js',
+      './src/js/froala-editor/js/plugins/emoticons.min.js',
+      './src/js/froala-editor/js/plugins/entities.min.js',
+      './src/js/froala-editor/js/plugins/file.min.js',
+      './src/js/froala-editor/js/plugins/font_family.min.js',
+      './src/js/froala-editor/js/plugins/font_size.min.js',
+      './src/js/froala-editor/js/plugins/fullscreen.min.js',
+      './src/js/froala-editor/js/plugins/image.min.js',
+      './src/js/froala-editor/js/plugins/image_manager.min.js',
+      './src/js/froala-editor/js/plugins/inline_style.min.js',
+      './src/js/froala-editor/js/plugins/line_breaker.min.js',
+      './src/js/froala-editor/js/plugins/link.min.js',
+      './src/js/froala-editor/js/plugins/lists.min.js',
+      './src/js/froala-editor/js/plugins/paragraph_format.min.js',
+      './src/js/froala-editor/js/plugins/paragraph_style.min.js',
+      './src/js/froala-editor/js/plugins/quote.min.js',
+      './src/js/froala-editor/js/plugins/save.min.js',
+      './src/js/froala-editor/js/plugins/table.min.js',
+      './src/js/froala-editor/js/plugins/video.min.js'
+    ],
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
     'app': './src/main.ts' // our angular app
@@ -166,6 +194,12 @@ module.exports = function makeWebpackConfig() {
       }
     }),
 
+    new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "windows.jQuery": "jquery"
+        }),
+
     // Workaround needed for angular 2 angular/angular#11580
       new webpack.ContextReplacementPlugin(
         // The (\\|\/) piece accounts for path separators in *nix and Windows
@@ -218,7 +252,7 @@ module.exports = function makeWebpackConfig() {
       // Reference: https://webpack.github.io/docs/code-splitting.html
       // Reference: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
       new CommonsChunkPlugin({
-        name: ['vendor', 'polyfills']
+        name: ['vendor', 'polyfills', 'library']
       }),
 
       // Inject script and link tags into html files
