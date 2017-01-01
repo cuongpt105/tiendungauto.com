@@ -102,4 +102,4 @@ import { FileSystemService } from '../services/file-system.service';
   ]
 })
 
-export class AdminModule { }
+export class AdminModule {}

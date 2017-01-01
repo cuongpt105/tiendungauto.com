@@ -48,7 +48,7 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#entry
    */
   config.entry = isTest ? {} : {
-    'library': [
+    /*'library': [
       './src/js/jquery.min.js',
       './src/js/bootstrap.min.js',
       './src/js/froala-editor/js/froala_editor.min.js',
@@ -75,7 +75,7 @@ module.exports = function makeWebpackConfig() {
       './src/js/froala-editor/js/plugins/save.min.js',
       './src/js/froala-editor/js/plugins/table.min.js',
       './src/js/froala-editor/js/plugins/video.min.js'
-    ],
+    ],*/
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
     'app': './src/main.ts' // our angular app
@@ -194,12 +194,6 @@ module.exports = function makeWebpackConfig() {
       }
     }),
 
-    new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "windows.jQuery": "jquery"
-        }),
-
     // Workaround needed for angular 2 angular/angular#11580
       new webpack.ContextReplacementPlugin(
         // The (\\|\/) piece accounts for path separators in *nix and Windows
@@ -252,7 +246,7 @@ module.exports = function makeWebpackConfig() {
       // Reference: https://webpack.github.io/docs/code-splitting.html
       // Reference: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
       new CommonsChunkPlugin({
-        name: ['vendor', 'polyfills', 'library']
+        name: ['vendor', 'polyfills']
       }),
 
       // Inject script and link tags into html files
