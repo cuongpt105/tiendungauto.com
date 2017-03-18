@@ -11,6 +11,6 @@ export class RatingViewComponent {
     private value: number;
     
     constructor() {
-
+        this.value;
     }
 }

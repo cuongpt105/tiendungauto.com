@@ -92,12 +92,13 @@ export class ProductComponent implements OnInit {
             },
 
             err => {
-                console.log("==========Error during save product");
+                console.log("==========Error during save product:"+err);
             }
         );
     }
 
     cancelProduct(product: Product) {
+        product;
         this.product = null;
         this.isView = false;
         this.isCreate = false;
@@ -105,6 +106,7 @@ export class ProductComponent implements OnInit {
     }
 
     backProducts(product: Product) {
+        product;
         this.product = null;
         this.isView = false;
         this.isCreate = false;

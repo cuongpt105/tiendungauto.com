@@ -76,6 +76,7 @@ export class TinTucComponent implements OnInit {
 
     saveTinTuc() {
         this.tintucService.saveTinTuc(this.tintuc).subscribe(tintuc => {
+            tintuc;
             this.tintuc = null;
             this.tintucService.getTinTucs().subscribe(tintucs => {
                 this.tintucs = tintucs;

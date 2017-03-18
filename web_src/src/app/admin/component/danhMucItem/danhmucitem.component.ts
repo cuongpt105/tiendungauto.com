@@ -24,6 +24,7 @@ export class DanhMucItemComponent implements OnInit{
     constructor(){}
 
     ngOnInit() {
+        this.danhmucs;
     }
 
     createDanhMuc(parent: DanhMuc) {

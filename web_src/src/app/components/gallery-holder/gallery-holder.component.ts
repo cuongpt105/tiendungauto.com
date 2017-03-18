@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 import { Gallery } from '../../admin/model/gallery';
 

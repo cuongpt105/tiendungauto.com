@@ -17,7 +17,8 @@ export class RatingComponent {
     private onRating: EventEmitter<number> = new EventEmitter<number>();
     
     constructor() {
-
+        this.value;
+        this.numberTimeRating;
     }
 
     onChangeRating(value: number) {

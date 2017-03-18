@@ -1,5 +1,6 @@
 <!-- Start Header -->
 <header-customize></header-customize>
+<div class="clearfix"></div>
 <!-- End Header -->
 
 <!-- BREAD CRUMB -->
@@ -8,17 +9,18 @@
         <bread-crumb></bread-crumb>
     </div>
 </div>
+<div class="clearfix"></div>
 
 <!-- Main content that include side bar in left side -->
 <div class="body-content outer-top-xs">
     <div class="container">
-        <div class="row outer-bottom-sm">
-            <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="outer-bottom-sm">
+            <div class="main-side-bar">
                 <side-bar></side-bar>
             </div>
 
             <!-- MAIN CONTENT -->
-            <div class="col-md-9 main-content-panel">
+            <div class="main-content-panel">
                 <!-- CONTENT -->
                 <router-outlet></router-outlet>
             </div>

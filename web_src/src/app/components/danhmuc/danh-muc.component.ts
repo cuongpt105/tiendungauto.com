@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { DanhMuc } from '../../admin/model/danhmuc';
 import { HeaderInfo } from '../../models/header-info';
@@ -30,7 +30,6 @@ export class DanhMucComponent implements OnInit {
     
     constructor(
         private route: ActivatedRoute,
-        private router: Router,
         private infoCommonHandle: InformationCommonHandle,
         private danhMucBroadcast: DanhMucBroadcast,
         private productService: ProductService

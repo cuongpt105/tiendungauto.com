@@ -58,7 +58,7 @@ export class AppModule { }
 In your component:
 ```
 import {Component, OnInit} from "@angular/core";
-import {FroalaEditorCompnoent} from 'ng2-froala-editor/ng2-froala-editor';    <-- add this to get instance of FroalaEditorComponent
+import {FroalaEditorComponent} from 'ng2-froala-editor/ng2-froala-editor';    <-- add this to get instance of FroalaEditorComponent
 
 @Component({
   selector: 'my-component',
@@ -91,7 +91,7 @@ export class MyComponent implements OnInit {
   }
 
   onEditorInitialized(event?: any) {
-    this.editor = FroalaEditorCompnoent.getFroalaInstance();
+    this.editor = FroalaEditorComponent.getFroalaInstance();
     this.editor.on('froalaEditor.focus', (e, editor) => {
       console.log("editor is focused");
     });
@@ -120,7 +120,7 @@ Use `onEditorInitialized()` function above as example:
 ```
 onEditorInitialized(event?: any) {
   // Save the editor instance
-  this.editor = FroalaEditorCompnoent.getFroalaInstance();
+  this.editor = FroalaEditorComponent.getFroalaInstance();
 
   // Listen to Froala Editor's event
   this.editor.on('froalaEditor.focus', (e, editor) => {

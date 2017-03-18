@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
-import { MenuItem } from '../../models/menu-item';
-import { HeaderInfo } from '../../models/header-info'; 
+ 
 import { BreadCrumbInfo } from '../../models/bread-crumb-info';
 import { BanDo } from '../../admin/model/bando';
 

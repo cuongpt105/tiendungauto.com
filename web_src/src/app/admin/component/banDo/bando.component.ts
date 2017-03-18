@@ -52,6 +52,7 @@ export class BanDoComponent implements OnInit {
 
     saveBanDo() {
         this.bandoService.saveBanDo(this.bando).subscribe(bando => {
+            bando;
             this.bandoService.getBanDos().subscribe(bandos => {
                 this.bandos = bandos;
                 this.bando = null;

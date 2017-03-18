@@ -5,7 +5,6 @@ import '@angular/core';
 import '@angular/common';
 import '@angular/http';
 import '@angular/router';
-import 'primeng/primeng';
 
 import 'rxjs';
 import '@angularclass/hmr';
@@ -16,8 +15,5 @@ import '@angularclass/hmr';
 import './css/font-awesome.min.css';
 import './css/bootstrap.min.css';
 import './css/bootstrap-theme.min.css';
-
-import './../node_modules/primeng/resources/themes/omega/theme.css';
-import './../node_modules/primeng/resources/primeng.min.css';
 
 import './css/styles.css';

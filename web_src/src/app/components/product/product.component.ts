@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { HeaderInfo } from '../../models/header-info';
 import { MenuItem } from '../../models/menu-item';
@@ -9,7 +9,6 @@ import { Gallery } from '../../admin/model/gallery';
 import { DanhMuc } from '../../admin/model/danhmuc';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
-import { DanhMucBroadcast } from '../../broadcast/danh-muc-broadcast.service';
 import { ProductService } from '../../admin/service/product.service';
 import { GalleryUtil } from '../../util/gallery-util';
 
@@ -30,11 +29,12 @@ export class ProductComponent implements OnInit{
     constructor(
         private route: ActivatedRoute,
         private productService: ProductService,
-        private infoCommonHandle: InformationCommonHandle,
-        private danhMucBroadcast: DanhMucBroadcast
+        private infoCommonHandle: InformationCommonHandle
     ){}
 
     ngOnInit() {
+        this.quantityValue;
+
         this.productRating = 4;
         this.product = new Product();
         this.quantityInformation = "";
@@ -57,7 +57,7 @@ export class ProductComponent implements OnInit{
     } 
 
     onChangeRating(ratingValue) {
-        
+        ratingValue;
     }
 
     private updateInformationCommon() {

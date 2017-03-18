@@ -15,6 +15,7 @@ export class SideBarComponent implements OnInit {
     private danhMucSelected: DanhMuc;
     private danhmucs: DanhMuc[];
     private danhMucList: DanhMuc[];
+    private categoryMobileActive: boolean;
 
     constructor(
         private danhMucService: DanhMucService,
@@ -22,6 +23,7 @@ export class SideBarComponent implements OnInit {
     ){}
 
     ngOnInit() {
+        this.categoryMobileActive = false;
         this.danhMucList = [];
         this.danhMucService.getDanhMucs().subscribe(dms => {
             this.danhmucs = dms;
@@ -34,6 +36,11 @@ export class SideBarComponent implements OnInit {
 
     onCategorySelected(danhmuc: DanhMuc) {
         this.danhMucSelected = danhmuc;
+        this.onActiveCategoryMobile();
+    }
+
+    onActiveCategoryMobile() {
+        this.categoryMobileActive = !this.categoryMobileActive;
     }
 
     private convertTreeToList(): DanhMuc[] {

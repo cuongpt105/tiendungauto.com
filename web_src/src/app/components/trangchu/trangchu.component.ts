@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MenuItem } from '../../models/menu-item';
-import { HeaderInfo } from '../../models/header-info'; 
-import { BreadCrumbInfo } from '../../models/bread-crumb-info';
 import { Product } from '../../admin/model/product';
 import { Gallery } from '../../admin/model/gallery';
 
@@ -11,7 +8,6 @@ import { HeaderInfoService } from '../../services/header-info.service';
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
 import { ProductService } from '../../admin/service/product.service';
 import { GalleryService } from '../../admin/service/gallery.service'; 
-import { GalleryUtil } from '../../util/gallery-util';
 
 @Component({
     selector: 'trang-chu',

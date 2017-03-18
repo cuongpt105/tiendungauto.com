@@ -1,12 +1,8 @@
-@media (min-width: 992px) {
-    .product-item {
-        float: left;
-        width: 33.33333333%;
-    }
-}
 
 /* CSS FOR SORT */
 .title-sort-panel {
+    float: left;
+    width: 100%;
     border-bottom: 1px solid #e3e3e3;
     margin-bottom: 10px;
 }
@@ -31,10 +27,9 @@
 
 .product-item {
     margin-bottom: 14px;
-}
-
-.product-item:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .product-name-link {
@@ -52,7 +47,7 @@
 }
 
 .product-img-thumb {
-    height: 190px;
+    height: 170px;
     cursor: pointer;
 }
 
@@ -91,22 +86,9 @@
 }
 
 /* CSS for cart */
-.product-item:hover .cart {
-    opacity: 1;
-}
-
 .product-item .cart {
-    margin-top: 5px;
-    opacity: 0;
-    -webkit-transition: all 0.2s linear 0s;
-    -moz-transition: all 0.2s linear 0s;
-    -o-transition: all 0.2s linear 0s;
-    transition: all 0.2s linear 0s;
-    width: 100%;
-}
-.cart {
     text-align: center;
-    margin-top: 5px;
+    padding-bottom: 1px;
     opacity: 1;
     -webkit-transition: all 0.2s linear 0s;
     -moz-transition: all 0.2s linear 0s;
@@ -161,4 +143,53 @@
 
 .product-item .cart .action ul li.lnk a:hover {
     color: #3498db;
+}
+
+@media screen and (max-width: 420px) {
+    .product-item-container {
+        width: 100%;
+    }
+
+    .product-item {
+        border-radius: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .product-img-thumb {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 700px) {
+    .product-item-container {
+            float: left;
+            width: 50%;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .product-item-container {
+            float: left;
+            width: 33.33333%;
+    }
+
+    .cart .action .list-unstyled .compare {
+        display: none;
+    }
+
+    .product-item .cart .action ul li.lnk.wishlist {
+        border-right: 0px;
+    }
+
+    .product-img-thumb {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .product-item-container {
+            float: left;
+            width: 33.33333%;
+    }
 }

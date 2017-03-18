@@ -20,6 +20,7 @@ export class DanhMucSelectionComponent implements OnInit{
     constructor(){}
 
     ngOnInit() {
+        this.danhmucs;
         this.currentDanhMuc = new DanhMuc();
     }
 

@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 
 import {Observable} from 'rxjs/Rx';
-import {UploadFileService} from './upload-file.service';
 import { AppSettings } from '../../util/app-setting';
 
 import { Gallery } from '../model/gallery';
@@ -18,7 +17,7 @@ export class GalleryService {
     deleteGallery(galleryId: String): Observable<Boolean> {
         let url = `${this.galleryUrl}/${galleryId}`;
         return this.http.delete(url)
-                        .map(res => true)
+                        .map(res => {res; return true})
                         .catch(this.handleError);
     }
 

@@ -7,7 +7,6 @@ import { FileSystem } from '../../admin/model/file-system';
 import { HeaderService } from '../../admin/service/header.service'
 import { MenuService } from '../../services/menu.service';
 import { MenuItemBroadcast } from '../../services/menu-item-broadcast.service';
-import { CommonBroadcast } from '../../services/common-broadcast.service';
 
 @Component({
   selector: 'header-customize',

@@ -1,9 +1,9 @@
-<div class="no-margin col-md-12">
-    <div class="no-margin col-md-5 product-image-detail-panel">
+<div class="no-margin col-xs-12 col-sm-12 col-md-12">
+    <div class="product-image-detail-panel">
         <gallery-holder [galleries]="galleries" *ngIf="galleries.length > 0"></gallery-holder>
     </div>
 
-    <div class="no-margin col-md-7 product-short-information-panel">
+    <div class="product-short-information-panel">
         <h1 class="header-product-name">
             {{product.name}}
             <div class="no-margin col-md-12 product-code">
@@ -12,30 +12,30 @@
         </h1>
         
 
-        <div class="no-margin col-md-12 product-rating">
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-rating">
             <rating [value]="productRating" [numberTimeRating]="0" (onRating)="onChangeRating($event)"></rating>
         </div>
 
-        <div class="product-short-description" *ngIf="(product.shortDescription && product.shortDescription.length > 0)">
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-short-description" *ngIf="(product.shortDescription && product.shortDescription.length > 0)">
             <div [innerHTML]="product.shortDescription"></div>
         </div>
 
-        <div class="product-producer">Nhà sản xuất: {{product.producer}}</div>
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-producer">Nhà sản xuất: {{product.producer}}</div>
 
-        <div class="product-guarantee">Bảo hành: {{product.guarantee}}</div>
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-guarantee">Bảo hành: {{product.guarantee}}</div>
 
-        <div class="product-quantity">{{quantityInformation}}</div>
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-quantity">{{quantityInformation}}</div>
 
-        <div class="product-price">
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-price">
             <strong>{{product.priceSell | pipeSimpleNumber}}₫ </strong>
         </div>
 
-        <div class="no-margin col-md-12 product-add-cart">
-            <div class="no-margin col-md-2 quantity-label"> Số lượng: </div>
+        <div class="no-margin col-xs-12 col-sm-12 col-md-12 product-add-cart">
+            <div class="quantity-label"> Số lượng: </div>
 
-            <input class="col-md-1" type="tel" name="quantity" ([ngModel])="quantityValue" min="1" max="100">
+            <input class="quantity-value" type="tel" name="quantity" ([ngModel])="quantityValue" min="1" max="100">
 
-            <div class="col-md-9">
+            <div class="btn-add-cart-panel">
                 <a class="btn btn-primary btn-product-add-cart" href="javascript:void(0)" (click)="addToCart()">
                     <i class="fa fa-shopping-cart inner-right-vs"></i> 
                     <span>
@@ -47,7 +47,7 @@
     </div>
 </div>
 
-<div class="no-margin col-md-12 product-detail-panel">
+<div class="no-margin col-xs-12 col-sm-12 col-md-12 product-detail-panel">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#productInformationDetail">Chi tiết sản phẩm</a></li>
         <li><a data-toggle="tab" href="#productFeedback">Đánh giá sản phẩm</a></li>

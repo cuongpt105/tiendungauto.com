@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import {Http} from '@angular/http';
 
-import {Observable, Observer, Subject} from 'rxjs/Rx';
+import {Observable, Subject} from 'rxjs/Rx';
 import {UploadFileService} from './upload-file.service';
 import { AppSettings } from '../../util/app-setting';
 
 import {ProductImage} from '../model/productimage';
-import {FileSystem} from '../model/file-system';
 
 
 @Injectable() 

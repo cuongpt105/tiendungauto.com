@@ -37,44 +37,42 @@ export class ProductGroupComponent implements OnInit {
 
     private fieldsSort: FieldSort[];
     private currentFieldSort: FieldSort;
-    private isDescendant
 
     constructor(){
-
+        
     }
 
     ngOnInit() {
-        this.isDescendant = true;
+        this.isShowSort;
+        this.title;
+        this.total;
+        this.limit;
+        this.currentPage;
+        this.products;
+        
         this.fieldsSort = this.getFieldsSortData();
         this.currentFieldSort = this.fieldsSort[0];
     }
 
     private getFieldsSortData() {
         let  fieldsSort: FieldSort[] = [];
-        let dateSort: FieldSort = new FieldSort("date", "Ngày");
-        let priceSort: FieldSort = new FieldSort("price", "Giá");
+        let dateSort: FieldSort = new FieldSort("date desc", "Sản phẩm mới nhất");
+        let priceNewSort: FieldSort = new FieldSort("price desc", "Giá cao đến thấp");
+        let priceOldSort: FieldSort = new FieldSort("price", "Giá thấp đến cao");
         fieldsSort.push(dateSort);
-        fieldsSort.push(priceSort);
+        fieldsSort.push(priceNewSort);
+        fieldsSort.push(priceOldSort);
 
         return fieldsSort;
     }
 
     detailProduct(product: Product) {
-
+        product;
     }
 
     sortFieldChange(field: FieldSort) {
         this.currentFieldSort = field;
-        if (this.isDescendant) {
-            this.onSortChange.emit(this.currentFieldSort.name + " desc");
-        } else {
-            this.onSortChange.emit(this.currentFieldSort.name);
-        }
-    }
-
-    sortChange() {
-        this.isDescendant = !this.isDescendant;
-        this.sortFieldChange(this.currentFieldSort);
+        this.onSortChange.emit(this.currentFieldSort.name);
     }
 
     pageChange(event) {
@@ -87,13 +85,14 @@ export class ProductGroupComponent implements OnInit {
 
     addToCart(product: Product) {
         ///gio-hang/{{product.id}}
+        product;
     }
 
     addToWishlist(product: Product) {
-
+        product;
     }
 
     addToCompare(product: Product) {
-
+        product;
     }
 }

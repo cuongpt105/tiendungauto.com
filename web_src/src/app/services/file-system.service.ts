@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import {Http} from '@angular/http';
 
-import {Observable, Observer, Subject} from 'rxjs/Rx';
+import {Observable, Subject} from 'rxjs/Rx';
 import {UploadFileService} from '../admin/service/upload-file.service';
 import { AppSettings } from '../util/app-setting';
 

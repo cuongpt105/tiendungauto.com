@@ -1,5 +1,5 @@
 import { OnInit, OnDestroy, EventEmitter, ElementRef } from '@angular/core';
-export declare class FroalaEditorCompnoent implements OnInit, OnDestroy {
+export declare class FroalaEditorComponent implements OnInit, OnDestroy {
     private el;
     froalaData: string;
     froalaOptions: any;

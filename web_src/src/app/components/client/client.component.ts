@@ -1,7 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
 
-import { HeaderInfo } from '../../models/header-info';
-
 import { HeaderInfoBroadcast } from '../../services/header-info-broadcast.service';
 
 declare var $: any

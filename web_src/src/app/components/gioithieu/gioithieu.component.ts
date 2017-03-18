@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MenuItem } from '../../models/menu-item';
-import { HeaderInfo } from '../../models/header-info'; 
 import { BreadCrumbInfo } from '../../models/bread-crumb-info';
 import { GioiThieu } from '../../admin/model/gioithieu';
 

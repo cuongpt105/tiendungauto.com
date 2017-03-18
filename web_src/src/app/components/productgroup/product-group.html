@@ -2,7 +2,7 @@
     <h3 class="title-row pull-left">{{title}}</h3>
 
     <div class="sort-row pull-right" *ngIf="isShowSort">
-        <span> Sắp xếp theo: </span>
+        <span class="hidden-xs"> Sắp xếp theo: </span>
         <div class="btn-group">
             <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
                 aria-haspopup="true" aria-expanded="false">
@@ -15,63 +15,63 @@
                 </li>
             </ul>
         </div>
-
-        <img class="icon-sort-product" src="../../icon/sortascend.png" (click)="sortChange()" *ngIf="!isDescendant"/>
-        <img class="icon-sort-product" src="../../icon/sortdescend.png" 
-            (click)="sortChange()" *ngIf="isDescendant"/>
     </div>
 </div>
 
+<div class="clearfix"></div>
+
 <div class="no-margin col-md-12 product-content-panel">
-    <div class="product-item" *ngFor="let product of products">
-        <div class="col-md-12 product-img-thumb">
-            <a routerLink="/san-pham/{{product.id}}">
-                <img *ngIf="product.mainImage" src="{{product.mainImage.pathFile}}" class="img-responsive"/>
-            </a>
-        </div>
-        
-        
-        <h3 class="col-md-12 product-name">
-            <a routerLink="/san-pham/{{product.id}}" class="product-name-link">{{product.name}}</a>
-        </h3>
-
-        <div class="col-md-12 product-rating">
-            <rating-view [value]="product.rating"></rating-view>
-        </div>
-
-        <div class="col-md-12 price-item">
-            <div class="pull-left price-sell">{{product.priceSell | pipeSimpleNumber}} đ</div>
-            <div class="pull-right price-original text-right">{{product.priceOriginal | pipeSimpleNumber}} đ</div>
-        </div>
-
-        <!-- BEGIN PRODUCT ACTION -->
-        <div class="cart clearfix animate-effect">
-            <div class="action">
-                <ul class="list-unstyled">
-                    <li class="add-cart-button btn-group">
-                        <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                            <i class="fa fa-shopping-cart"></i>
-                        </button>
-                        <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
-                    </li>
-                    <li class="lnk wishlist">
-                        <a class="add-to-cart" routerLink="/san-pham-yeu-thich/{{product.id}}" 
-                            title="Đưa vào sản phẩm yêu thích"
-                            (click)="addToWishlist(product)">
-                            <i class="icon fa fa-heart"></i>
-                        </a>
-                    </li>
-                    <li class="lnk">
-                        <a class="add-to-cart" routerLink="/san-pham-so-sanh/{{product.id}}" 
-                            title="Đưa vào mục so sánh"
-                            (click)="addToCompare(product)">
-                            <i class="fa fa-retweet"></i>
-                        </a>
-                    </li>
-                </ul>
+    <div class="product-item-container" *ngFor="let product of products">
+        <div class="product-item">
+            <div class="col-xs-12 col-sm-12 col-md-12 product-img-thumb">
+                <a routerLink="/san-pham/{{product.id}}">
+                    <img *ngIf="product.mainImage" src="{{product.mainImage.pathFile}}" class="img-responsive"/>
+                </a>
             </div>
-        </div> <!-- END PRODUCT ACTION -->
 
+            <h3 class="col-xs-12 col-sm-12 col-md-12 product-name">
+                <a routerLink="/san-pham/{{product.id}}" class="product-name-link">{{product.name}}</a>
+            </h3>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 product-rating">
+                <rating-view [value]="product.rating"></rating-view>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 price-item">
+                <div class="pull-left price-sell">{{product.priceSell | pipeSimpleNumber}} đ</div>
+                <div class="pull-right price-original text-right">{{product.priceOriginal | pipeSimpleNumber}} đ</div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- BEGIN PRODUCT ACTION -->
+            <div class="cart animate-effect">
+                <div class="action">
+                    <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
+                        </li>
+                        <li class="lnk wishlist">
+                            <a class="add-to-cart" routerLink="/san-pham-yeu-thich/{{product.id}}" 
+                                title="Đưa vào sản phẩm yêu thích"
+                                (click)="addToWishlist(product)">
+                                <i class="icon fa fa-heart"></i>
+                            </a>
+                        </li>
+                        <li class="lnk compare">
+                            <a class="add-to-cart" routerLink="/san-pham-so-sanh/{{product.id}}" 
+                                title="Đưa vào mục so sánh"
+                                (click)="addToCompare(product)">
+                                <i class="fa fa-retweet"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- END PRODUCT ACTION -->
+        </div>
     </div>
 </div>
 

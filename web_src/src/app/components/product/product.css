@@ -37,6 +37,23 @@
 }
 
 /* BUTTON ADD TO CART */
+.quantity-label {
+    float: left;
+}
+
+.quantity-value {
+    float: left;
+    max-width: 40px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.btn-add-cart-panel {
+    float: left;
+    margin-left: 10px;
+}
+
+
 .product-add-cart {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -76,4 +93,68 @@
 
 .tab-pane > div {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 560px) {
+    .product-image-detail-panel {
+        width: 100%;
+    }
+
+    .product-short-information-panel {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 362px) {
+        .btn-add-cart-panel {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 561px) and (max-width: 640px) {
+    .product-image-detail-panel {
+        float: left;
+        width: 45%;
+    }
+
+    .product-short-information-panel {
+        float: left;
+        width: 55%;
+        padding-left: 30px;
+    }
+
+    .btn-add-cart-panel {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .product-image-detail-panel {
+        float: left;
+        width: 40%;
+    }
+
+    .product-short-information-panel {
+        float: left;
+        width: 60%;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .product-image-detail-panel {
+        float: left;
+        width: 40%;
+    }
+
+    .product-short-information-panel {
+        float: left;
+        width: 60%;
+    }
 }

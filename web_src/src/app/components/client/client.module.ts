@@ -127,4 +127,4 @@ import { FileSystemService } from '../../services/file-system.service';
   ]
 })
 
-export class ClientModule { }
+export class ClientModule {}

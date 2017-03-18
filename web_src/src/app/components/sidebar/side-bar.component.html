@@ -14,22 +14,6 @@
             <ul class="nav" *ngIf="child.children.length > 0">
                 <li class="nav-item" *ngFor="let childL3 of child.children" (click)="onCategorySelected(childL3); $event.stopPropagation();">
                     <a [ngClass]="{'nav-icon':(childL3.children.length > 0)}" routerLink="/danh-muc/{{childL3.id}}">{{childL3.name}}</a>
-
-                    <!-- LEVEL 4 -->
-                    <ul class="nav" *ngIf="childL3.children.length > 0">
-                        <li class="nav-item" *ngFor="let childL4 of childL3.children" (click)="onCategorySelected(childL4); $event.stopPropagation();">
-                            <a [ngClass]="{'nav-icon':(childL4.children.length > 0)}" routerLink="danhmuc/{{childL4.id}}" >{{childL4.name}}</a>
-
-                            <!-- LEVEL 5 -->
-                            <ul *ngIf="childL4.children.length > 0">
-                                <li class="nav-item" *ngFor="let childL5 of childL4.children" (click)="onCategorySelected(childL5); $event.stopPropagation()">
-                                    <a [ngClass]="{'nav-icon':(childL5.children.length > 0)}" routerLink="/danh-muc/{{childL5.id}}">{{childL5.name}}</a>
-                                </li>
-                            </ul> <!-- END LEVEL 5 -->
-
-                        </li>
-                    </ul>   <!-- END LEVEL 4 -->
-
                 </li>
             </ul>   <!-- END LEVEL 3 -->
 
@@ -39,4 +23,38 @@
     </nav>
 </div>
 
+<div class="category-mobile-container">
+    <div class="category-title">Danh Mục
+        <i class="fa fa-bars" aria-hidden="true" (click)="onActiveCategoryMobile()" *ngIf="!categoryMobileActive"></i>
+        <i class="fa fa-times" aria-hidden="true" (click)="onActiveCategoryMobile()" *ngIf="categoryMobileActive"></i>
+    </div>
+    <div *ngIf="categoryMobileActive">
+        <div class="category-item-container" *ngFor="let dm of danhmucs">
+            <nav class="yamm megamenu-horizontal" role="navigation">
+
+                <ul class="nav-mobile" >
+                    <li class="main-category-item" (click)="onCategorySelected(dm)">
+                        <a routerLink="/danh-muc/{{dm.id}}">{{dm.name}}</a>
+                    </li>
+
+                    <!-- LEVEL 2 -->
+                    <li class="nav-item-mobile" *ngFor="let child of dm.children" (click)="onCategorySelected(child);">
+                        <a routerLink="/danh-muc/{{child.id}}">{{child.name}}</a>
+
+                        <!-- LEVEL 3 -->
+                        <ul class="nav-mobile" *ngIf="child.children.length > 0">
+                            <li class="nav-item-mobile" *ngFor="let childL3 of child.children" (click)="onCategorySelected(childL3); $event.stopPropagation();">
+                                <a class="item-level-3" routerLink="/danh-muc/{{childL3.id}}">{{childL3.name}}</a>
+                            </li>
+                        </ul>   <!-- END LEVEL 3 -->
+
+                    </li>   <!-- END LEVEL 2 -->
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <div class="clearfix"></div>
+

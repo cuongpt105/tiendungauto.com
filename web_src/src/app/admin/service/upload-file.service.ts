@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import {Observable, Observer, Subject} from 'rxjs/Rx';
 import {BroadcastEvent} from '../model/broadcast-event';
-import {FileSystem} from '../model/file-system';
 
 @Injectable() 
 export class UploadFileService {

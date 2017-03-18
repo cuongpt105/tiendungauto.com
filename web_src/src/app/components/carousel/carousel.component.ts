@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit, ElementRef, NgZone } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 
 import { Gallery } from '../../admin/model/gallery';
 
@@ -26,8 +26,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     private interval: any;
 
     constructor(
-        private elementRef:ElementRef,
-        private _ngZone: NgZone
+        private elementRef:ElementRef
     ) {}
 
     ngOnInit() {

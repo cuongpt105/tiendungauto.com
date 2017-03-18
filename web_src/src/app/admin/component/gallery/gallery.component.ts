@@ -102,6 +102,7 @@ export class GalleryComponent implements OnInit{
 
     private deleteFileUpload() {
         this.fileSystemService.deleteFile(this.fileSystemUpload.id).subscribe(result => {
+            result;
             this.fileSystemUpload = null;
         });
     }

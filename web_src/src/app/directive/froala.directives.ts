@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer, Input, Output, Optional, EventEmitter } from '@angular/core';
+import { Directive, ElementRef, Renderer, Input, Output, EventEmitter } from '@angular/core';
 
 // non-typescript definitions
 declare var $:any;
@@ -229,7 +229,6 @@ export class FroalaEditorDirective {
 
   // send manual editor initialization
   private generateManualController() {
-    let self = this;
     let controls = {
       initialize: this.createEditor.bind(this),
       destroy: this.destroyEditor.bind(this),
@@ -260,7 +259,6 @@ export class FroalaEditorDirective {
 export class FroalaViewDirective {
 
   private _element: HTMLElement;
-  private _content: any;
 
   constructor(private renderer: Renderer, element: ElementRef) {
     this._element = element.nativeElement;
