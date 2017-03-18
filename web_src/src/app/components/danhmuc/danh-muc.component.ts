@@ -113,7 +113,7 @@ export class DanhMucComponent implements OnInit {
 
         let breadcrumbs: BreadCrumbInfo[] = [];
         for (let dm of dms) {
-            let link: string = "/danhmuc/"+dm.id;
+            let link: string = "/danh-muc/"+dm.id;
             let value: string = ""+dm.name;
             let breadcrumb = new BreadCrumbInfo(link, value);
             breadcrumbs.push(breadcrumb);
