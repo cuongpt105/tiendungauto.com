@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
+import { SideBarItem } from '../../model/sidebar-item';
+import { SidebarItemBroadcast } from '../../service/sidebar-item-broadcast.service';
+import { SideBarItemService } from '../../service/sidebar-item.service';
+
 import { DanhMuc } from '../../model/danhmuc';
 import { DanhMucService} from '../../service/danhmuc.service';
 
@@ -13,10 +17,17 @@ export class DanhMucComponent implements OnInit{
     private danhmucs: DanhMuc[];
     private danhmuc: DanhMuc;
     private isCreate: Boolean;
+    private currentItem: SideBarItem;
 
-    constructor(private danhmucService: DanhMucService){}
+    constructor(
+        private sidebarItemBroadcast: SidebarItemBroadcast,
+        private sidebarItemService: SideBarItemService,
+        private danhmucService: DanhMucService){}
 
     ngOnInit() {
+        this.currentItem = this.sidebarItemService.getItemByName('danhmuc');
+        this.sidebarItemBroadcast.broadCastItem(this.currentItem);
+
         this.isCreate = false;
         this.danhmucs = [];
         this.danhmucService.getDanhMucs().subscribe(dm => this.danhmucs = dm);

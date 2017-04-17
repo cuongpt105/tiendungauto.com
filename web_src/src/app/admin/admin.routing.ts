@@ -9,7 +9,6 @@ import {KhuyenMaiComponent} from './component/khuyenMai/khuyenmai.component';
 import {TinTucComponent} from './component/tinTuc/tintuc.component';
 import {BanDoComponent} from './component/banDo/bando.component';
 import {ThanhToanComponent} from './component/thanhToan/thanhtoan.component';
-import {LienHeComponent} from './component/lienHe/lienhe.component';
 import { DanhMucComponent } from './component/danhMuc/danhmuc.component';
 import { ProductComponent } from './component/product/product.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
@@ -26,7 +25,6 @@ import { GalleryComponent } from './component/gallery/gallery.component';
             {path: 'tintuc', component: TinTucComponent},
             {path: 'bando', component: BanDoComponent},
             {path: 'thanhtoan', component: ThanhToanComponent},
-            {path: 'lienhe', component: LienHeComponent},
             {path: 'danhmuc', component: DanhMucComponent},
             {path: 'sanpham', component: ProductComponent},
             {path: 'gallery', component: GalleryComponent}

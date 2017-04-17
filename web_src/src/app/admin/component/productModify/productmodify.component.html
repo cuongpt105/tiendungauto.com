@@ -34,62 +34,122 @@
     </div>
 
     <!-- Thong tin nhap san pham -->
-    <div class="lable-info">Ten san pham :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.name" /></div>
+    <div class="no-margin row product-item-panel">
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="name">Tên sản phẩm:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="name" [(ngModel)]="product.name">
+            </div>
+        </div>
 
-    <div class="lable-info">Ma san pham :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.code" /></div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="code">Mã sản phẩm:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="code" [(ngModel)]="product.code">
+            </div>
+        </div>
 
-    <div class="lable-info">Thu tu san pham :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.position" /></div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="position">Thứ tự sản phẩm:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="position" [(ngModel)]="product.position" type="number" min="1">
+            </div>
+        </div>
 
-    <div class="lable-info">Thuoc danh muc :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.danhmuc.name" readonly/></div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="danhMucName">Thuộc về danh mục:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="danhMucName" [(ngModel)]="product.danhmuc.name" readonly>
+            </div>
+        </div>
 
-    <div class="lable-info">Gia goc :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.priceOriginal" /></div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="priceOriginal">Giá gốc:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="priceOriginal" [(ngModel)]="product.priceOriginal" type="number" min="0">
+            </div>
+        </div>
 
-    <div class="lable-info">Gia ban :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.priceSell" /></div>
+         <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="priceSell">Giá bán:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="priceSell" [(ngModel)]="product.priceSell" type="number" min="0">
+            </div>
+        </div>
 
-    <div class="lable-info">Gia khuyen mai :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.pricePromotion" /></div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="pricePromotion">Giá khuyến mãi:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="pricePromotion" [(ngModel)]="product.pricePromotion" type="number" min="0">
+            </div>
+        </div>
 
-    <div class="lable-info">Trang thai :</div>
-    <div class="value-info">
-        <input type="radio" [(ngModel)]="product.status" value="DRAFT">Luu tam thoi<br/>
-        <input type="radio" [(ngModel)]="product.status" value="PENDING">Cho doi<br/>
-        <input type="radio" [(ngModel)]="product.status" value="PUBLIC">Hien thi<br/>
-        <input type="radio" [(ngModel)]="product.status" value="HIDE">An<br/>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="pricePromotion">Trạng thái:</label>
+            <div class="col-md-10">
+                <input type="radio" [(ngModel)]="product.status" value="DRAFT">Lưu tạm thời<br/>
+                <input type="radio" [(ngModel)]="product.status" value="PENDING">Chờ đợi<br/>
+                <input type="radio" [(ngModel)]="product.status" value="PUBLIC">Hiện thị<br/>
+                <input type="radio" [(ngModel)]="product.status" value="HIDE">Ẩn<br/>
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="guarantee">Thời gian bảo hành:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="guarantee" [(ngModel)]="product.guarantee">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="producer">Nhà sản xuất:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="producer" [(ngModel)]="product.producer">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="vat">Thuế:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="vat" [(ngModel)]="product.vat" type="number" min="0">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="quantity">Số lượng:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="quantity" [(ngModel)]="product.quantity" type="number" min="0">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="unit">Đơn vị:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="unit" [(ngModel)]="product.unit">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="seoTitle">Tối ưu thẻ tiêu đề:</label>
+            <div class="col-md-10">
+                <input class="form-control" id="seoTitle" [(ngModel)]="product.seoTitle">
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="seoKeyword">Tối ưu thẻ từ khóa:</label>
+            <div class="col-md-10">
+                <textarea class="form-control" id="seoKeyword" [(ngModel)]="product.seoKeyword"></textarea>
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2" for="seoDescription">Tối ưu thẻ mô tả:</label>
+            <div class="col-md-10">
+                <textarea class="form-control" id="seoDescription" [(ngModel)]="product.seoDescription"></textarea>
+            </div>
+        </div>
     </div>
-
-    <div class="lable-info">Thoi gian bao hanh :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.guarantee" /></div>
-
-    <div class="lable-info">Nha san xuat :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.producer" /></div>
-
-    <div class="lable-info">Thue :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.vat" /></div>
-
-    <div class="lable-info">So luong :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.quantity" /></div>
-
-    <div class="lable-info">Don vi :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.unit" /></div>
-
-    <div class="lable-info">Toi uu the tieu de :</div>
-    <div class="value-info"><input class="input-value-infor" [(ngModel)]="product.seoTitle" /></div>
-
-    <div class="lable-info">Toi uu the tu khoa :</div>
-    <div class="value-info value-seo">
-        <textarea class="are-seo" [(ngModel)]="product.seoKeyword"></textarea>
-    </div>
-
-    <div class="lable-info">Toi uu the mo ta :</div>
-    <div class="value-info value-seo">
-        <textarea class="text-are-seo" [(ngModel)]="product.seoDescription"></textarea>
-     </div>
 
     <div class="view-detail-group">
         <ul class="nav nav-tabs">
@@ -122,7 +182,7 @@
             
             <div id="longDescription" class="tab-pane fade">
                  <div class="tab-value-info">
-                    <p-editor [(ngModel)]="product.detailDescription" [style]="{'height':'320px'}"></p-editor>
+                    <div [froalaEditor]="options" [(froalaModel)]="product.detailDescription"></div>
                 </div>  
             </div>
 
@@ -135,7 +195,7 @@
         </div>
     </div>
 
-    <div class="no-margin row group-button">
+    <div class="col-md-10 group-button">
         <div class="pull-right">
             <button class="btn btn-success btn-save" (click)="saveProduct()">Lưu</button>
             <button class="btn btn-danger btn-cancel" (click)="cancelProduct()">Hủy</button>

@@ -84,4 +84,9 @@ export class ThanhToanComponent implements OnInit {
             this.fileSystems = thanhtoan.files;
         });
     }
+
+    public options: Object = { 
+		placeholderText: 'Edit Your Content Here!',
+		charCounterCount: false
+	}
 }

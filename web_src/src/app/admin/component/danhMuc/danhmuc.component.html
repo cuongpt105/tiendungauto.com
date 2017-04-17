@@ -1,11 +1,14 @@
 <div class="danhmucContainer row">
-    <button class="btn" (click)="addRootDanhMuc()" title="Tao Danh Muc" value="Tao Danh Muc">
-        <i class="fa fa-plus fa-fw"></i>
-    </button>
-    <div class="dm-header">
-        <div class="col-xs-6 col-md-6 dm-header-name">Ten</div>
-        <div class="col-xs-2 col-md-2 dm-header-position">Vi Tri</div>
-        <div class="col-xs-2 col-md-2 dm-header-button"></div>
+    <div class="no-margin col-md-10">
+         <button class="btn-add-category pull-right" (click)="addRootDanhMuc()">
+            Tạo mới danh mục
+        </button>
+    </div>
+   
+    <div class="no-margin col-md-10 dm-header">
+        <div class="col-md-10 dm-header-name">Tên</div>
+        <div class="col-md-1 dm-header-position">Vị trí</div>
+        <div class="col-md-1 dm-header-button"></div>
     </div>
     <danh-muc-item [danhmucs]="danhmucs" 
         (onCreateDanhMuc)="onCreateDanhMuc($event)"
@@ -15,29 +18,59 @@
 
 ===========================
 <div class="danhmucModifyContainer row" *ngIf="danhmuc">
-    <div> Ten Danh Muc </div>
-    <input class="dm-name" [(ngModel)]="danhmuc.name"/>
-
-    <div> Mo Ta </div>
-    <input class="dm-description" [(ngModel)]="danhmuc.description"/>
-
-    <div> Thu Tu </div>
-    <input class="dm-position" [(ngModel)]="danhmuc.position"/>
-
-    <div> Trang Thai </div>
-    <input class="dm-status" [(ngModel)]="danhmuc.status" type="checkbox"/>
-
-    <div> Toi uu the tieu de </div>
-    <input class="dm-seo-title" [(ngModel)]="danhmuc.seoTitle"/>
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="name">Tên danh mục:</label>
+        <div class="col-md-9">
+            <input class="form-control" id="name" [(ngModel)]="danhmuc.name">
+        </div>
+    </div>
     
-    <div> Toi uu the tu khoa </div>
-    <input class="dm-seo-keyword" [(ngModel)]="danhmuc.seoKeyword"/>
-    
-    <div> Toi uu the mo ta </div>
-    <input class="dm-seo-description" [(ngModel)]="danhmuc.seoDescription"/>
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="description">Mô tả:</label>
+        <div class="col-md-9">
+            <input class="form-control" id="description" [(ngModel)]="danhmuc.description">
+        </div>
+    </div>
 
-    <div class="dm-button-group">
-        <button class="btn-cancel" (click)="cancelDanhMuc()">Huy</button>
-        <button class="btn-save" (click)="saveDanhMuc()">Luu</button>
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="position">Thứ tự:</label>
+        <div class="col-md-9">
+            <input type="number" class="form-control" id="position" [(ngModel)]="danhmuc.position" min="1">
+        </div>
+    </div>
+
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="status">Trạng thái:</label>
+        <div class="col-md-9">
+            <input type="checkbox" id="status" [(ngModel)]="danhmuc.status">
+        </div>
+    </div>
+
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="seoTitle">Tối ưu thẻ tiêu đề:</label>
+        <div class="col-md-9">
+            <input class="form-control" id="seoTitle" [(ngModel)]="danhmuc.seoTitle">
+        </div>
+    </div>
+
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="seoKeyword">Tối ưu thẻ từ khóa:</label>
+        <div class="col-md-9">
+            <input class="form-control" id="seoKeyword" [(ngModel)]="danhmuc.seoKeyword">
+        </div>
+    </div>
+    
+    <div class="no-margin col-md-7 form-group">
+        <label class="control-label col-md-3" for="seoDescription">Tối ưu thẻ mô tả:</label>
+        <div class="col-md-9">
+            <input class="form-control" id="seoDescription" [(ngModel)]="danhmuc.seoDescription">
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="pull-right">
+            <button class="btn-cancel" (click)="cancelDanhMuc()">Hủy</button>
+            <button class="btn-save" (click)="saveDanhMuc()">Lưu</button>
+        </div>
     </div>
 </div>

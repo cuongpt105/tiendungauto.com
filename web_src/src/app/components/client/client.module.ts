@@ -40,6 +40,7 @@ import { HeaderInfoBroadcast} from '../../services/header-info-broadcast.service
 import { MenuItemBroadcast } from '../../services/menu-item-broadcast.service';
 import { BreadCrumbInfoBroadcast} from '../../services/bread-crumb-broadcast.service';
 import { DanhMucBroadcast } from '../../broadcast/danh-muc-broadcast.service';
+import { ProductCartBroadcast } from '../../broadcast/product-cart-broadcast.service';
 
 import { InformationCommonHandle } from '../../services/information-common-handle.service';
 
@@ -105,6 +106,7 @@ import { FileSystemService } from '../../services/file-system.service';
     MenuItemBroadcast,
     BreadCrumbInfoBroadcast,
     DanhMucBroadcast,
+    ProductCartBroadcast,
 
     InformationCommonHandle,
 

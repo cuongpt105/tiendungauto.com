@@ -18,7 +18,6 @@ import {KhuyenMaiComponent} from './component/khuyenMai/khuyenmai.component';
 import {TinTucComponent} from './component/tinTuc/tintuc.component';
 import {BanDoComponent} from './component/banDo/bando.component';
 import {ThanhToanComponent} from './component/thanhToan/thanhtoan.component';
-import {LienHeComponent} from './component/lienHe/lienhe.component';
 import { DanhMucComponent } from './component/danhMuc/danhmuc.component';
 import { DanhMucItemComponent} from './component/danhMucItem/danhmucitem.component';
 import { DanhMucSelectionComponent } from './component/danhMucSelection/danhmucselection.component';
@@ -71,7 +70,6 @@ import { FileSystemService } from '../services/file-system.service';
     TinTucComponent,
     BanDoComponent,
     ThanhToanComponent,
-    LienHeComponent,
     DanhMucComponent,
     DanhMucItemComponent,
     DanhMucSelectionComponent,

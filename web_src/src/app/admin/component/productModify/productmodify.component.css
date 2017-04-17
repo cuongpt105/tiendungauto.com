@@ -38,3 +38,7 @@
 .image-item-panel.active {
     background-color: lightblue;
 }
+
+.product-item-panel {
+    margin-top: 20px;
+}

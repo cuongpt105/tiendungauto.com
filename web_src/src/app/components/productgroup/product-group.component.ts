@@ -2,6 +2,9 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 import { Product } from '../../admin/model/product';
 import { FieldSort } from '../../models/field-sort';
+import { ProductCart } from '../../models/product-cart';
+
+import { ProductCartBroadcast } from '../../broadcast/product-cart-broadcast.service';
 
 @Component({
     selector: 'product-group',
@@ -38,7 +41,7 @@ export class ProductGroupComponent implements OnInit {
     private fieldsSort: FieldSort[];
     private currentFieldSort: FieldSort;
 
-    constructor(){
+    constructor(private productCartBroadcast: ProductCartBroadcast){
         
     }
 
@@ -84,8 +87,8 @@ export class ProductGroupComponent implements OnInit {
     }
 
     addToCart(product: Product) {
-        ///gio-hang/{{product.id}}
-        product;
+        let productCart = new ProductCart(1, product);
+        this.productCartBroadcast.broadCastValue(productCart);
     }
 
     addToWishlist(product: Product) {

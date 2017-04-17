@@ -82,4 +82,9 @@ export class DichVuComponent implements OnInit {
             this.fileSystems = dichvu.files;
         });
     }
+
+    public options: Object = { 
+		placeholderText: 'Edit Your Content Here!',
+		charCounterCount: false
+	}
 }

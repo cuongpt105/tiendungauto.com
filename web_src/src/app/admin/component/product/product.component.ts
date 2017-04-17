@@ -85,7 +85,6 @@ export class ProductComponent implements OnInit {
                 } else {
                     this.products = this.productService.updateProductInList(this.products, pd);
                 }
-                console.log();
                 this.isView = false;
                 this.isCreate = false;
                 this.isHideList = false;

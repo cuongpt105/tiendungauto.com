@@ -93,7 +93,7 @@ export class ProductModifyComponent implements OnInit {
 		this.onSaveProduct.emit(this.product);
 	}
 	
-	cancelProduct() {8
+	cancelProduct() {
 		this.onCancelProduct.emit(this.product);
 	}
 }

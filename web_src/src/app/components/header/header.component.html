@@ -32,7 +32,7 @@
                 <div class="items-cart-inner">
                     <div class="total-price-basket">
                         <span class="total-price">
-                            <span class="value">0</span>
+                            <span class="value">{{totalAmount | pipeSimpleNumber}}</span>
                             <span class="sign">đ</span>
                         </span>
                     </div>
@@ -41,7 +41,7 @@
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                     </div>
 
-                    <div class="basket-item-count"><span class="count">0</span></div>
+                    <div class="basket-item-count"><span class="count">{{totalQuantity}}</span></div>
                 </div>
             </a>
         </div>

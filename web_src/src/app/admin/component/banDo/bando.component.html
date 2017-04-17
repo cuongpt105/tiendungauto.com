@@ -1,17 +1,17 @@
 <div class="ban-do-panel">
     <div *ngIf="bando" class="modify-ban-do col-md-12"> 
         <div class="col-md-12">
-            <div class="col-md-3">Tieu de:</div>
+            <div class="col-md-3">Tiêu đề:</div>
             <input class="col-md-9 ban-do-title" [(ngModel)] = "bando.title"/>
         </div>
 
         <div class="col-md-12">
-            <div class="col-md-3">Dia chi:</div>
+            <div class="col-md-3">Địa chỉ:</div>
             <input class="col-md-9 ban-do-address" [(ngModel)] = "bando.address"/>
         </div>
         
         <div class="col-md-12">
-            <div class="col-md-3">Dien thoai:</div>
+            <div class="col-md-3">Điện thoại:</div>
             <input class="col-md-9 ban-do-phone" [(ngModel)] = "bando.phone"/>
         </div>
 
@@ -26,40 +26,41 @@
         </div>
 
         <div class="col-md-12">
-            <div class="col-md-3">Dia chi ban do:</div>
+            <div class="col-md-3">Địa chỉ bản đồ:</div>
             <input class="col-md-9 ban-do-map" [(ngModel)] = "bando.map"/> 
         </div>
 
         <div class="col-md-12">
             <div class="pull-right">
-                <button class="btn btn-cancel" (click)="cancelBanDo()">Huy</button>
-                <button class="btn btn-save" (click)="saveBanDo()">Luu</button>
+                <button class="btn btn-cancel" (click)="cancelBanDo()">Hủy</button>
+                <button class="btn btn-save" (click)="saveBanDo()">Lưu</button>
             </div>
         </div>     
     </div>
 
     <div class="list-ban-do col-md-12" *ngIf="!bando">
         <div class="col-md-12">
-            <button class="pull-right" (click)="addBanDo()">Tao Moi Ban Do</button>
+            <button class="pull-right" (click)="addBanDo()">Tạo mới bản đồ</button>
         </div>
         
         <div *ngFor = "let bando of bandos" class="item-ban-do col-md-12">
-            <div class="col-md-4">{{bando.title}}</div>
-            <div class="col-md-1">{{bando.address}}</div>
+            <div class="col-md-3">{{bando.title}}</div>
+            <div class="col-md-5">{{bando.address}}</div>
             <div class="col-md-1">{{bando.phone}}</div>
-            <div class="col-md-1">{{bando.email}}</div>
-            <div class="col-md-1">{{bando.website}}</div>
-            <div class="col-md-3">{{bando.map}}</div>
+            <div class="col-md-2">{{bando.email}}</div>
+            
             <div class="item-button col-md-1">
                 <div class="pull-right">
-                    <a href="javascript:void(0)" (click)="editBanDo(bando)" title="Chinh Sua Ban Do">
+                    <a href="javascript:void(0)" (click)="editBanDo(bando)" title="Chỉnh sửa bản đồ">
                         <i class="fa fa-pencil-square-o fa-fw"></i>
                     </a>
-                    <a href="javascript:void(0)" (click)="deleteBanDo(bando)" title="Xoa Ban Do">
+                    <a href="javascript:void(0)" (click)="deleteBanDo(bando)" title="Xóa bản đồ">
                         <i class="fa fa-trash-o fa-fw"></i>
                     </a>
                 </div>
             </div>
+            <div class="col-md-3">{{bando.website}}</div>
+            <div class="col-md-9">{{bando.map}}</div>
         </div>
     </div>
     

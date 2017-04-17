@@ -17,3 +17,7 @@
 .dm-level-5 {
     padding-left: 40px;
 }
+
+.category-item-1:hover, .category-item-2:hover, .category-item-3:hover, .category-item-4:hover, .category-item-5:hover {
+    background-color: lightskyblue;
+}

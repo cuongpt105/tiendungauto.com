@@ -46,14 +46,14 @@
     <div class="no-margin row image-detail-content" *ngFor="let image of imagesNotSelected"> 
         <div class="no-margin col-md-7 image-item-panel">
             <div class="col-md-2 image-content">
-                <img class="img-responsive" src="{{image.pathFile}}" width="100"/>
+                <img class="img-responsive" src="{{image.file.pathFile}}" width="100"/>
             </div>           
             
-            <div class="col-md-7 image-name">{{image.originalName}}</div>
-            <div class="col-md-2 image-size">{{image.size/1024}}</div>
+            <div class="col-md-7 image-name">{{image.file.originalName}}</div>
+            <div class="col-md-2 image-size">{{image.file.size/1024}}</div>
             <div class="col-md-1 image-action">
-                <a href="javascript:void(0)" (click)="removeImage(image)">
-                    <i class="fa fa-trash-o fa-fw"> </i>
+                <a href="javascript:void(0)" (click)="addImage(image)">
+                    <i class="fa fa-plus fa-fw"> </i>
                 </a>
             </div>
         </div>

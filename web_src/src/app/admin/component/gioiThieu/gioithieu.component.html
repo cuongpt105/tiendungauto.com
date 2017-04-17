@@ -9,7 +9,7 @@
 </div>
 
 <div class="file-upload-panel">
-    <div>Danh sach file trong gioi thieu</div>
+    <div>Danh sach file trong giới thiệu</div>
     <div class="file-gioi-thieu-item" *ngFor="let file of files"> 
         <div class="content-file">
             <img class="image-file" src="{{file.pathFile}}" width="100">
@@ -27,7 +27,7 @@
 
 <div class="content-panel">
     <div [froalaEditor] [(froalaModel)]="gioithieu.content"></div>
-    <button class="btn-cancel" (click)="cancelGioiThieu()">Huy</button>
-    <button class="btn-save" (click)="saveGioiThieu()">Luu</button>
+    <button class="btn-cancel" (click)="cancelGioiThieu()">Hủy</button>
+    <button class="btn-save" (click)="saveGioiThieu()">Lưu</button>
 </div>
 

@@ -122,3 +122,22 @@
 [2017-03-18 23:04:23.614] [ERROR] TRI_AUTO - ProductDao:findProductById: Message:ProductEntity.findOne; StactTrace:MongoError: Topology was destroyed
 [2017-03-18 23:04:23.616] [ERROR] TRI_AUTO - ProductService:findProductById: Message:productDao.findProductById; StactTrace:MongoError: Topology was destroyed
 [2017-03-18 23:04:23.617] [ERROR] TRI_AUTO - productRouter:GET /product/:product_id: Message:productService.findProductById; StactTrace:MongoError: Topology was destroyed
+[2017-04-06 18:34:41.280] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.301] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.302] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.303] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.304] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.305] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.307] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.311] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.312] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.318] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.319] [ERROR] TRI_AUTO - ProductDao:findProductsOfDanhMuc: Message:ProductEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.319] [ERROR] TRI_AUTO - ProductService:findProductsActiveByDanhMuc: Message:productDao.findProductsActiveByDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-06 18:34:41.320] [ERROR] TRI_AUTO - productRouter:GET /products/total-product: Message:productService.findProductsActiveByDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-17 21:50:41.771] [ERROR] TRI_AUTO - BanDoService:findAllBanDo: Message:BanDoEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-04-17 21:50:41.848] [ERROR] TRI_AUTO - BanDoRouter:GET /bando: Message:bandoService.findAllBanDo; StactTrace:MongoError: Topology was destroyed
+[2017-04-17 21:54:44.519] [ERROR] TRI_AUTO - BanDoService:findAllBanDo: Message:BanDoEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-17 21:54:44.525] [ERROR] TRI_AUTO - BanDoRouter:GET /bando: Message:bandoService.findAllBanDo; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-04-17 21:54:53.462] [ERROR] TRI_AUTO - BanDoService:findAllBanDo: Message:BanDoEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-04-17 21:54:53.463] [ERROR] TRI_AUTO - BanDoRouter:GET /bando: Message:bandoService.findAllBanDo; StactTrace:MongoError: Topology was destroyed

@@ -49,10 +49,11 @@
                 <div class="action">
                     <ul class="list-unstyled">
                         <li class="add-cart-button btn-group">
-                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"
+                                (click)="addToCart(product)">
                                 <i class="fa fa-shopping-cart"></i>
                             </button>
-                            <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary" type="button" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
                         </li>
                         <li class="lnk wishlist">
                             <a class="add-to-cart" routerLink="/san-pham-yeu-thich/{{product.id}}" 

@@ -108,7 +108,7 @@
 }
 
 .dropdown-cart .lnk-cart .items-cart-inner .total-price-basket {
-    padding: 2px 15px;
+    padding: 4px 15px;
     font-family: 'FjallaOneRegular';
     float: left;
     min-width: 100px;
@@ -120,7 +120,7 @@
 
 .total-price .value {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .dropdown-cart .lnk-cart .items-cart-inner .basket {
@@ -311,6 +311,14 @@ ul.topnav li.icon {
     .cart-holder {
         float: left;
         width: 19%;
+    }
+
+    .items-cart-inner .total-price-basket {
+        margin-top: 6px;
+    }
+
+    .total-price-basket .total-price .value {
+        font-size: 14px;
     }
 }
 
