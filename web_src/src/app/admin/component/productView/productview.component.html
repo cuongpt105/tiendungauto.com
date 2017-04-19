@@ -1,15 +1,25 @@
 <div class="product-view-container">
-    <button class="btn-product-view" (click)="backProducts()">Tro ve</button>
+    <button class="btn-product-view pull-right" (click)="backProducts()">Quay lại danh sách sản phẩm</button>
 
-    <div class="main-product-image">
+    <div class="no-margin row main-product-image">
         <img src="{{product.mainImage.pathFile}}" width="100px"/>
     </div>
 
-    <div class="lable-info">Ten san pham :</div>
-    <div class="value-info">{{product.name}}</div>
+    <div class="no-margin row view-product-panel">
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2">Tên sản phẩm:</label>
+            <div class="col-md-10">
+                {{product.name}}
+            </div>
+        </div>
 
-    <div class="lable-info">Ma san pham :</div>
-    <div class="value-info">{{product.code}}</div>
+        <div class="no-margin col-md-10 form-group">
+            <label class="control-label col-md-2">Mã sản phẩm:</label>
+            <div class="col-md-10">
+                {{product.code}}
+            </div>
+        </div>
+    </div>
 
     <div class="lable-info">Thu tu san pham :</div>
     <div class="value-info">{{product.position}}</div>

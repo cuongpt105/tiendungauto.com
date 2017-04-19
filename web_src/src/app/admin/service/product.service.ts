@@ -97,14 +97,9 @@ export class ProductService {
     }
 
     updateProductInList(products: Product[], product: Product): Product[] {
-        let deleteCount: number = 1;
-        let indexStart = products.findIndex(pd => pd.id === product.id);
-
-        if (indexStart >= 0) {
-            products =  products.splice(indexStart, deleteCount, product);
-        }
-
-        return products.sort(this.compareProduct);
+        let result: Product[] = products.filter(pd => pd.id !== product.id);
+        result.push(product);
+        return result.sort(this.compareProduct);
     }
 
     private compareProduct(a:Product, b:Product) {
