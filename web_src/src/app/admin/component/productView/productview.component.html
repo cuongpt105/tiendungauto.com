@@ -7,46 +7,89 @@
 
     <div class="no-margin row view-product-panel">
         <div class="no-margin col-md-10 form-group">
-            <label class="control-label col-md-2">Tên sản phẩm:</label>
+            <label class="col-md-2">Tên sản phẩm:</label>
             <div class="col-md-10">
                 {{product.name}}
             </div>
         </div>
 
         <div class="no-margin col-md-10 form-group">
-            <label class="control-label col-md-2">Mã sản phẩm:</label>
+            <label class="col-md-2">Mã sản phẩm:</label>
             <div class="col-md-10">
                 {{product.code}}
             </div>
         </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Thứ tự sản phẩm:</label>
+            <div class="col-md-10">
+                {{product.position}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Thuộc danh mục:</label>
+            <div class="col-md-10">
+                {{product.danhmuc.name}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Giá gốc:</label>
+            <div class="col-md-10">
+                {{product.priceOriginal}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Giá bán:</label>
+            <div class="col-md-10">
+                {{product.priceSell}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Giá khuyến mãi:</label>
+            <div class="col-md-10">
+                {{product.pricePromotion}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Trạng thái:</label>
+            <div class="col-md-10">
+                {{product.status}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Thời gian bảo hành:</label>
+            <div class="col-md-10">
+                {{product.guarantee}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Nhà sản xuất:</label>
+            <div class="col-md-10">
+                {{product.producer}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Thuế:</label>
+            <div class="col-md-10">
+                {{product.vat}}
+            </div>
+        </div>
+
+        <div class="no-margin col-md-10 form-group">
+            <label class="col-md-2">Số lượng:</label>
+            <div class="col-md-10">
+                {{product.quantity}}
+            </div>
+        </div>
     </div>
-
-    <div class="lable-info">Thu tu san pham :</div>
-    <div class="value-info">{{product.position}}</div>
-
-    <div class="lable-info">Thuoc danh muc :</div>
-    <div class="value-info">{{product.danhmuc.name}}</div>
-
-    <div class="lable-info">Gia goc :</div>
-    <div class="value-info">{{product.priceOriginal}}</div>
-
-    <div class="lable-info">Gia ban :</div>
-    <div class="value-info">{{product.priceSell}}</div>
-
-    <div class="lable-info">Gia khuyen mai :</div>
-    <div class="value-info">{{product.pricePromotion}}</div>
-
-    <div class="lable-info">Trang thai :</div>
-    <div class="value-info">{{product.status}}</div>
-
-    <div class="lable-info">Thoi gian bao hanh :</div>
-    <div class="value-info">{{product.guarantee}}</div>
-
-    <div class="lable-info">Nha san xuat :</div>
-    <div class="value-info">{{product.producer}}</div>
-
-    <div class="lable-info">Thue :</div>
-    <div class="value-info">{{product.vat}}</div>
 
     <div class="lable-info">So luong :</div>
     <div class="value-info">{{product.quantity}}</div>
