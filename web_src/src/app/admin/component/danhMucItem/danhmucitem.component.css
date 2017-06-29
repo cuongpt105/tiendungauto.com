@@ -3,19 +3,28 @@
 }
 
 .dm-level-2 {
-    padding-left: 10px;
-}
-
-.dm-level-3 {
     padding-left: 20px;
 }
 
+.dm-level-3 {
+    padding-left: 40px;
+}
+
 .dm-level-4 {
-    padding-left: 30px;
+    padding-left: 60px;
 }
 
 .dm-level-5 {
-    padding-left: 40px;
+    padding-left: 80px;
+}
+
+.category-collpase {
+    font-size: 16px;
+}
+
+.category-item-1, .category-item-2, .category-item-3, .category-item-4, .category-item-5 {
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .category-item-1:hover, .category-item-2:hover, .category-item-3:hover, .category-item-4:hover, .category-item-5:hover {

@@ -9,7 +9,7 @@
 </div>
 
 <div class="file-upload-panel">
-    <div>Danh sách file trong thanh toán</div>
+    <div>Danh sách file đã upload cho Thanh Toán:</div>
     <div class="file-thanh-toan-item" *ngFor="let file of fileSystems"> 
         <div class="content-file">
             <img class="image-file" src="{{file.pathFile}}" width="100">
@@ -25,9 +25,14 @@
     </div>
 </div>
 
-<div class="content-panel">
-    <div [froalaEditor] [(froalaModel)]="thanhtoan.content"></div>
-    <button class="btn-cancel" (click)="cancelThanhToan()">Hủy</button>
-    <button class="btn-save" (click)="saveThanhToan()">Lưu</button>
+<div class="content-panel row">
+    <div class="col-md-11" [froalaEditor] [(froalaModel)]="thanhtoan.content"></div>
+
+    <div class="col-md-11 group-button">
+        <div class="pull-right">
+            <button class="btn btn-success btn-save" (click)="saveThanhToan()">Lưu</button>
+            <button class="btn btn-danger btn-cancel" (click)="cancelThanhToan()">Hủy</button>
+        </div>
+    </div>
 </div>
 

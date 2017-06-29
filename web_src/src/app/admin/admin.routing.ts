@@ -18,15 +18,15 @@ import { GalleryComponent } from './component/gallery/gallery.component';
     {path: '', component: AdminComponent,
         children: [
             {path: '', component: GioiThieuComponent},
-            {path: 'gioithieu', component: GioiThieuComponent},
+            {path: 'gioi-thieu', component: GioiThieuComponent},
             {path: 'header', component: HeaderComponent},
-            {path: 'dichvu', component: DichVuComponent},
-            {path: 'khuyenmai', component: KhuyenMaiComponent},
-            {path: 'tintuc', component: TinTucComponent},
-            {path: 'bando', component: BanDoComponent},
-            {path: 'thanhtoan', component: ThanhToanComponent},
-            {path: 'danhmuc', component: DanhMucComponent},
-            {path: 'sanpham', component: ProductComponent},
+            {path: 'dich-vu', component: DichVuComponent},
+            {path: 'khuyen-mai', component: KhuyenMaiComponent},
+            {path: 'tin-tuc', component: TinTucComponent},
+            {path: 'ban-do', component: BanDoComponent},
+            {path: 'thanh-toan', component: ThanhToanComponent},
+            {path: 'danh-muc', component: DanhMucComponent},
+            {path: 'san-pham', component: ProductComponent},
             {path: 'gallery', component: GalleryComponent}
         ]
     }

@@ -38,4 +38,20 @@ export class DanhMucItemComponent implements OnInit{
     deleteDanhMuc(danhmuc: DanhMuc) {
         this.onDeleteDanhMuc.emit(danhmuc);
     }
+
+    showChildCategory(category: DanhMuc) {
+        category.isCollapse = false;
+    }
+
+    hideChildCategory(category: DanhMuc) {
+        category.isCollapse = true;
+    }
+
+    isCollapse(category: DanhMuc): Boolean {
+        if (category.isCollapse) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

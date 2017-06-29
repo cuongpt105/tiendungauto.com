@@ -1,0 +1,12 @@
+.view-ban-do-map {
+    word-wrap: break-word;
+}
+
+.item-ban-do {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item-ban-do:hover {
+    background-color: lightskyblue;
+}

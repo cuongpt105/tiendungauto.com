@@ -37,7 +37,7 @@ export class AdminComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.isSideBarCollapsed = true;
+    this.isSideBarCollapsed = false;
     this.items = this.sidebarItemService.getSidebarItems();
     this.sidebarItemBroadcast.itemSubject.subscribe(item => this.itemSelected = item);
   }

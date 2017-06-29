@@ -37,6 +37,14 @@ export class CarouselComponent implements OnInit, AfterViewInit {
         this.isDisplayCarousel = false;
         this.current = new Gallery("", null, null);
         this.getSizeOfItem();
+
+        setInterval(() => {
+            let sizeTemp = this.itemSize;
+            this.getSizeOfItem();
+            if (sizeTemp != this.itemSize) {
+                this.updateLayoutAfterContentLoaded();
+            }
+        }, 200);
     }
 
     ngAfterViewInit() {

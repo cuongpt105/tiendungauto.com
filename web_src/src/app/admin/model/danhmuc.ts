@@ -12,4 +12,5 @@ export class DanhMuc {
 
     parentId: String;
     children: DanhMuc[];
+    isCollapse: Boolean;
 }

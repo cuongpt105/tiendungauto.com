@@ -17,8 +17,6 @@ import { ProductCartBroadcast } from '../../broadcast/product-cart-broadcast.ser
 })
 
 export class HeaderComponent implements OnInit {
-    private isResponsive: Boolean;
-
     private header: Header;
     private menuItems: MenuItem[];
     private menuItemSelected: MenuItem;
@@ -36,7 +34,6 @@ export class HeaderComponent implements OnInit {
         let file = new FileSystem();
         this.header = new Header();
         this.header.file = file;
-        this.isResponsive = false;
         this.menuItemSelected = new MenuItem("","","");
         this.totalQuantity = 0;
         this.totalAmount = 0;
@@ -70,15 +67,6 @@ export class HeaderComponent implements OnInit {
             this.calculateTotalAmount();
             localStorage.setItem("productCarts", JSON.stringify(this.productCarts));
         });
-    }
-
-    onMenuItemSelected(menuItem: MenuItem) {
-        this.menuItemSelected = menuItem;
-        this.isResponsive = !this.isResponsive;
-    }
-
-    expandCollapseMenu() {
-        this.isResponsive = !this.isResponsive;
     }
 
     private calculateTotalAmount() {

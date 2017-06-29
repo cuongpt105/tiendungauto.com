@@ -50,14 +50,13 @@
 
 <div class="header-nav">
     <div class="container">
-        <ul class="topnav" [ngClass]="{responsive:isResponsive}" >
+        <ul class="topnav">
             <li *ngFor="let item of menuItems">
                 <a [ngClass]="{active:(item.name === menuItemSelected.name)}" [routerLink]="[item.linkRef]"
                     (click)="onMenuItemSelected(item)">{{item.value}}</a>
             </li>
-            <li class="icon">
-                <a href="javascript:void(0);" (click)="expandCollapseMenu()">☰</a>
-            </li>
         </ul>
     </div>
 </div>
+
+<mobi-header [menuItems]="menuItems" [headerFile]="header.file" [totalQuantity]="totalQuantity"></mobi-header>

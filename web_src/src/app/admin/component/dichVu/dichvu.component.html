@@ -1,4 +1,4 @@
-<div class="title-for-upload-gioi-thieu"> Chon file de upload</div>
+<div class="title-for-upload-gioi-thieu">Chọn file để upload</div>
 <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto" multiple/>
 
 <div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
@@ -9,7 +9,7 @@
 </div>
 
 <div class="file-upload-panel">
-    <div>Danh sach file trong dich vu</div>
+    <div>Danh sách file trong phần Dịch Vụ:</div>
     <div class="file-gioi-thieu-item" *ngFor="let file of fileSystems"> 
         <div class="content-file">
             <img class="image-file" src="{{file.pathFile}}" width="100">
@@ -25,9 +25,14 @@
     </div>
 </div>
 
-<div class="content-panel">
-    <div [froalaEditor] [(froalaModel)]="dichvu.content"></div>
-    <button class="btn-cancel" (click)="cancelDichVu()">Huy</button>
-    <button class="btn-save" (click)="saveDichVu()">Luu</button>
+<div class="content-panel row">
+    <div class="col-md-11" [froalaEditor] [(froalaModel)]="dichvu.content"></div>
+
+    <div class="col-md-11 group-button">
+        <div class="pull-right">
+            <button class="btn btn-success btn-save" (click)="saveDichVu()">Lưu</button>
+            <button class="btn btn-danger btn-cancel" (click)="cancelDichVu()">Hủy</button>
+        </div>
+    </div>
 </div>
 

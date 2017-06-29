@@ -35,6 +35,7 @@ import {LienHeComponent} from '../lienhe/lien-he.component';
 import { DanhMucComponent} from '../danhmuc/danh-muc.component';
 import { ProductGroupComponent } from '../productgroup/product-group.component';
 import { ProductComponent } from '../product/product.component';
+import { MobiHeaderComponent} from '../mobi-header/mobi-header.component';
 
 import { HeaderInfoBroadcast} from '../../services/header-info-broadcast.service';
 import { MenuItemBroadcast } from '../../services/menu-item-broadcast.service';
@@ -98,7 +99,8 @@ import { FileSystemService } from '../../services/file-system.service';
 
     DanhMucComponent,
     ProductGroupComponent,
-    ProductComponent
+    ProductComponent,
+    MobiHeaderComponent
   ],
   
   providers: [

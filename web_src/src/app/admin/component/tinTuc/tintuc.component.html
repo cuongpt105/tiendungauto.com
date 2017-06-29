@@ -1,4 +1,4 @@
-<div class="title-for-upload-gioi-thieu"> Chon file de upload</div>
+<div class="title-for-upload-gioi-thieu">Chọn file để upload</div>
 <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." name="userPhoto" multiple/>
 
 <div class="html5-progress-bar" *ngIf="numberOfDataUpload > 0" >
@@ -9,7 +9,7 @@
 </div>
 
 <div class="tin-tuc-file-panel">
-    <div>Danh sach file trong tin tuc</div>
+    <div>Danh sách file đã upload cho Tin Tức:</div>
     <div class="col-md-12 file-tin-tuc-item" *ngFor="let tintucfile of tintucfiles"> 
         <div class="col-md-11 content-file">
             <img class="col-md-2 image-file" src="{{tintucfile.file.pathFile}}" width="100">
@@ -26,16 +26,16 @@
 </div>
 
 <div class="tin-tuc-panel">
-    <div *ngIf="tintuc" class="modify-tin-tuc"> 
-        <div class="col-md-12">
-            <div class="col-md-3">Tieu de:</div>
+    <div *ngIf="tintuc" class="modify-tin-tuc row"> 
+        <div class="no-margin col-md-12">
+            <div class="col-md-3">Tiêu đề:</div>
             <div class="col-md-9">
                 <input class="tin-tuc-title" [(ngModel)]="tintuc.title"/>
             </div>    
         </div>
         
-        <div class="col-md-12">
-            <div class="col-md-3">Anh tieu de:</div>
+        <div class="no-margin col-md-12">
+            <div class="col-md-3">Ảnh tiêu đề:</div>
             <div class="col-md-9">
                 <select [(ngModel)]="tintuc.imageTitle">
                     <option *ngFor="let tintucfile of tintucfiles" [ngValue]="tintucfile.file">
@@ -45,21 +45,25 @@
             </div>
         </div>
 
-        <div class="col-md-12">
-            <div class="col-md-12">Noi dung:</div>
+        <div class="no-margin col-md-12">
+            <div class="col-md-12">Nội dung:</div>
 
             <div class="col-md-12">
-                <p-editor [(ngModel)]="tintuc.content" [style]="{'height':'320px'}"></p-editor>
+                <div [froalaEditor] [(froalaModel)]="tintuc.content"></div>
             </div>
         </div>
 
-        <button class="btn-cancel" (click)="cancelTinTuc()">Huy</button>
-        <button class="btn-save" (click)="saveTinTuc()">Luu</button>
+        <div class="col-md-12 group-button">
+            <div class="pull-right">
+                <button class="btn btn-success btn-save" (click)="saveTinTuc()">Lưu</button>
+                <button class="btn btn-danger btn-cancel" (click)="cancelTinTuc()">Hủy</button>
+            </div>
+        </div>
     </div>
 
     <div class="list-tin-tuc row" *ngIf="!tintuc">
         <div class="col-md-12">
-            <button class="pull-right btn" (click)="addTinTuc()">Tao Moi Tin Tuc</button>
+            <button class="pull-right btn" (click)="addTinTuc()">Tạo Mới Tin Tức</button>
         </div>
         
         <div class="col-md-12 tin-tuc-item" *ngFor = "let tintuc of tintucs">

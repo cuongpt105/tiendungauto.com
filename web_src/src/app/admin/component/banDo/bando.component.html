@@ -40,7 +40,7 @@
 
     <div class="list-ban-do col-md-12" *ngIf="!bando">
         <div class="col-md-12">
-            <button class="pull-right" (click)="addBanDo()">Tạo mới bản đồ</button>
+            <button class="pull-right btn" (click)="addBanDo()">Tạo mới bản đồ</button>
         </div>
         
         <div *ngFor = "let bando of bandos" class="item-ban-do col-md-12">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="col-md-3">{{bando.website}}</div>
-            <div class="col-md-9">{{bando.map}}</div>
+            <div class="col-md-9 view-ban-do-map">{{bando.map}}</div>
         </div>
     </div>
     

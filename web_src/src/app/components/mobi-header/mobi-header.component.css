@@ -1,0 +1,31 @@
+.mobi-header-panel {
+    height: 40px;
+    background-color: rgb(52, 152, 219);
+    font-size: 15px;
+    color: white;
+}
+
+.bar-mobi-header {
+    margin-top: 8px;
+}
+
+.logo-mobi-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-image {
+ max-height: 35px;
+}
+
+.icon-shopping-cart {
+    margin-left: 10px;
+}
+
+.icon-mobi-header {
+     margin-top: 2px;
+}
+
+.menu-item-bar-icon {
+    margin-top: 5px;
+}

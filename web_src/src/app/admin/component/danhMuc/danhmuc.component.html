@@ -16,7 +16,10 @@
         (onDeleteDanhMuc)="onDeleteDanhMuc($event)"></danh-muc-item>
 </div>
 
-===========================
+<div class="no-margin col-md-10">
+    <hr>
+</div>
+
 <div class="danhmucModifyContainer row" *ngIf="danhmuc">
     <div class="no-margin col-md-7 form-group">
         <label class="control-label col-md-3" for="name">Tên danh mục:</label>
@@ -69,8 +72,8 @@
 
     <div class="col-md-7">
         <div class="pull-right">
-            <button class="btn-cancel" (click)="cancelDanhMuc()">Hủy</button>
-            <button class="btn-save" (click)="saveDanhMuc()">Lưu</button>
+            <button class="btn btn-success btn-save" (click)="saveDanhMuc()">Lưu</button>
+            <button class="btn btn-danger btn-cancel" (click)="cancelDanhMuc()">Hủy</button>
         </div>
     </div>
 </div>

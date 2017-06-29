@@ -100,4 +100,9 @@ export class TinTucComponent implements OnInit {
             this.tintucs = tintucs;
         });
     }
+
+    public options: Object = { 
+		placeholderText: 'Edit Your Content Here!',
+		charCounterCount: false
+	}
 }

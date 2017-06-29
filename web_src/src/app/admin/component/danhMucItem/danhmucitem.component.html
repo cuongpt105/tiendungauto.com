@@ -4,7 +4,7 @@
             <div [ngClass]="['dm-level-'+danhmuc.level]">{{danhmuc.name}}</div>
         </div>
         <div class="col-md-1 dm-position">{{danhmuc.position}}</div>
-        <div class="col-md-1 dm-button">
+        <div class="no-margin col-md-1 dm-button">
             <a href="javascript:void(0)" (click)="createDanhMuc(danhmuc)" title="Tạo danh mục">
                 <i class="fa fa-plus fa-fw"></i>
             </a>
@@ -15,12 +15,24 @@
             <a href="javascript:void(0)" (click)="deleteDanhMuc(danhmuc)" title="Xóa danh mục">
                 <i class="fa fa-trash-o fa-fw"></i>
             </a>
+
+            <a class="category-collpase" *ngIf="isCollapse(danhmuc)" href="javascript:void(0)" 
+                (click)="showChildCategory(danhmuc)" title="Hiển thị danh mục con">
+                <i class="fa fa-angle-down"></i>
+            </a>
+
+            <a class="category-collpase" *ngIf="!isCollapse(danhmuc)" href="javascript:void(0)" 
+                (click)="hideChildCategory(danhmuc)" title="Ẩn danh mục con">
+                <i class="fa fa-angle-up"></i>
+            </a>
         </div>
     </div>
     
-
-    <danh-muc-item [danhmucs]="danhmuc.children"
+    <div *ngIf="!isCollapse(danhmuc)">
+        <danh-muc-item [danhmucs]="danhmuc.children"
         (onCreateDanhMuc)="createDanhMuc($event)"
         (onEditDanhMuc)="editDanhMuc($event)"
         (onDeleteDanhMuc)="deleteDanhMuc($event)"></danh-muc-item>
+    </div>
+    
 </div>
