@@ -141,3 +141,146 @@
 [2017-04-17 21:54:44.525] [ERROR] TRI_AUTO - BanDoRouter:GET /bando: Message:bandoService.findAllBanDo; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
 [2017-04-17 21:54:53.462] [ERROR] TRI_AUTO - BanDoService:findAllBanDo: Message:BanDoEntity.find; StactTrace:MongoError: Topology was destroyed
 [2017-04-17 21:54:53.463] [ERROR] TRI_AUTO - BanDoRouter:GET /bando: Message:bandoService.findAllBanDo; StactTrace:MongoError: Topology was destroyed
+[2017-06-26 22:17:51.192] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: connection 6 to ds015953.mlab.com:15953 timed out
+[2017-06-26 22:17:51.245] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 6 to ds015953.mlab.com:15953 timed out
+[2017-06-26 22:17:51.247] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 6 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:01:37.289] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: connection 9 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:01:37.317] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: connection 9 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:01:37.319] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: connection 9 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.192] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.194] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.195] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.198] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.199] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.200] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.203] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.204] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:36.206] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 21 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.472] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.473] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.475] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.478] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.479] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.481] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.483] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.487] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:04:54.491] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: connection 19 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.519] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: connection 35 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.521] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: connection 35 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.523] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: connection 35 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.531] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: connection 34 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.533] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: connection 34 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.535] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: connection 34 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.628] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: connection 37 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.630] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: connection 37 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.631] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: connection 37 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:13:38.633] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: connection 37 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:20:09.623] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: connection 53 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:20:09.624] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: connection 53 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:20:09.626] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: connection 53 to ds015953.mlab.com:15953 timed out
+[2017-06-29 22:20:09.628] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findProductsByDanhMuc; StactTrace:MongoError: connection 53 to ds015953.mlab.com:15953 timed out
+[2017-06-29 23:51:23.972] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:23.979] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:23.980] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:23.984] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:23.987] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:23.988] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.024] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.036] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.037] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.042] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.043] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.044] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.048] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.049] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:51:24.050] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: failed to reconnect after 30 attempts with interval 1000 ms
+[2017-06-29 23:52:35.316] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.317] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.318] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.333] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.334] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.335] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.398] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.405] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.406] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.447] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.448] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.449] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.463] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.464] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:52:35.466] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.899] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.902] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.902] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.920] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.920] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.920] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.967] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.967] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-29 23:59:59.968] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.014] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.015] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.016] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.030] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.034] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:00.035] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:14.978] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:14.978] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:14.980] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.007] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.008] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.009] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.070] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.071] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.073] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.128] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.130] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.130] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.149] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.150] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:15.151] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.919] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.920] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.920] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.935] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.936] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.937] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.986] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.987] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:56.989] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.023] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.024] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.025] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.040] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.040] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:00:57.041] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.291] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.291] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.292] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.308] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.309] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.310] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.362] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.363] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.364] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.400] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.401] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.402] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.414] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.415] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:03:11.415] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.756] [ERROR] TRI_AUTO - HeaderDao:findHeader: Message:HeaderEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.757] [ERROR] TRI_AUTO - HeaderService:findHeader: Message:headerDao.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.758] [ERROR] TRI_AUTO - HeaderRouter:GET /header: Message:headerService.findHeader; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.776] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.776] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.777] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.823] [ERROR] TRI_AUTO - DanhMucDao:findDanhMucs: Message:DanhMucEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.823] [ERROR] TRI_AUTO - DanhMucService:findAllDanhMuc: Message:danhmucDao.findDanhMucs; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.824] [ERROR] TRI_AUTO - DanhMucRouter:GET /danhmuc: Message:danhmucService.findAllDanhMuc; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.869] [ERROR] TRI_AUTO - ProductDao:findProductsWithPaginateOfDanhMucs: Message:ProductEntity.find; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.870] [ERROR] TRI_AUTO - ProductService:findLatestProductsActiveBySpecifyField: Message:productDao.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.870] [ERROR] TRI_AUTO - productRouter:GET /products: Message:productService.findLatestProductsActiveBySpecifyField; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.883] [ERROR] TRI_AUTO - GalleryDao:getAllGalleries: Message:GalleryEntity.find({}); StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.884] [ERROR] TRI_AUTO - GalleryService:getAllGalleries: Message:galleryDao.getAllGalleries; StactTrace:MongoError: Topology was destroyed
+[2017-06-30 00:04:17.884] [ERROR] TRI_AUTO - GalleryRouter:GET /galleries: Message:galleryService.getAllGalleries; StactTrace:MongoError: Topology was destroyed

@@ -25,20 +25,49 @@
                 <i *ngIf="isShowMenuItem" class="fa fa-times  pull-right" aria-hidden="true"></i>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- list category item -->
-        <div *ngIf="isShowCategoryItem" class="category-item-panel">
-
-        </div>
-
-        <!-- list menu item -->
-        <div *ngIf="isShowCategoryItem" class="menu-item-panel">
-
-        </div>
-
-         <!-- show search input -->
-        <div *ngIf="isShowSearchInput" class="menu-item-panel">
-
+<div class="container">
+    <!-- show search input -->
+    <div *ngIf="isShowSearchInput" class="search-ear-panel">
+        <div class="control-group">
+            <input type="text" name="search" class="search-field" placeholder="Tìm sản phẩm ờ đây...">
         </div>
     </div>
 </div>
+
+<div class="navigation-bar-container">
+    <!-- list category item -->
+    <div *ngIf="isShowCategoryItem" class="category-item-panel">
+        <ul class="nav-category" *ngFor="let dm of danhmucs">
+            <li class="nav-item">
+                <a (click)="onCategorySelected(dm)" routerLink="/danh-muc/{{dm.id}}">{{dm.name}}</a>
+
+                <!-- LEVEL 2 -->
+                <ul class="nav-category" *ngFor="let childL2 of dm.children">
+                    <li class="nav-item">
+                        <a class="item-level2" (click)="onCategorySelected(childL2)" routerLink="/danh-muc/{{childL2.id}}">{{childL2.name}}</a>
+
+                        <!-- LEVEL 3 -->
+                        <ul class="nav-category" *ngFor="let childL3 of childL2.children">
+                            <li class="nav-item">
+                                <a class="item-level3" (click)="onCategorySelected(childL3)" routerLink="/danh-muc/{{childL3.id}}">{{childL3.name}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- list menu item -->
+    <div *ngIf="isShowCategoryItem" class="menu-item-panel">
+
+    </div>
+
+    <!-- a div element to prevent user click any place -->
+    <div *ngIf="isShowCategoryItem || isShowMenuItem" class="menu-prevent" (click)="onRemoveMenu()"></div>
+</div>
+
+

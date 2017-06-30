@@ -65,6 +65,12 @@ export class MobiHeaderComponent implements OnInit {
         this.isShowSearchInput = false;
     }
 
+    onRemoveMenu() {
+        this.isShowCategoryItem = false;
+        this.isShowMenuItem = false;
+        this.isShowSearchInput = false;
+    }
+
     onCartIconSelected() {
         // redirect to cart page
     }

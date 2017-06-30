@@ -181,117 +181,25 @@ ul.topnav li.icon {
   display: none;
 }
 
-@media screen and (max-width: 670px) {
-    .logo-holder {
-        float: left;
-        width: 100%;
-    }
-    .logo-holder > .header-image {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-    .search-holder {
-        float: left;
-        width:  100%;
-        margin-bottom: 10px;
-    }
-
-    .search-holder .contact-row, .cart-holder, ul.topnav li:not(:first-child) {
+@media screen and (max-width: 1024px) {
+    .header-holder, .header-nav {
         display: none;
     }
 
-    ul.topnav li.icon {
-		float: right;
-        display: inline-block;
-    }
-
-    ul.topnav.responsive {position: relative;}
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    ul.topnav.responsive li {
-		float: none;
-        display: inline;
-    }
-    ul.topnav.responsive li a {
+    mobi-header {
         display: block;
-        text-align: left;
     }
 }
 
-@media screen and (min-width: 671px) and (max-width: 800px) {
-    .logo-holder {
-        float: left;
-        width: 100%;
-    }
-    .logo-holder > .header-image {
-        margin-left: auto;
-        margin-right: auto;
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .header-holder, .header-nav {
         display: block;
     }
 
-    .search-holder {
-        float: left;
-        width:  100%;
-        margin-bottom: 10px;
-    }
-
-    .cart-holder, ul.topnav li:not(:first-child) {
+    mobi-header {
         display: none;
     }
 
-    ul.topnav li.icon {
-		float: right;
-        display: inline-block;
-    }
-
-    ul.topnav.responsive {position: relative;}
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    ul.topnav.responsive li {
-		float: none;
-        display: inline;
-    }
-    ul.topnav.responsive li a {
-        display: block;
-        text-align: left;
-    }
-}
-
-@media screen and (min-width: 801px) and (max-width: 1000px) {
-    .logo-holder {
-        float: left;
-        width: 100%;
-    }
-    .logo-holder > .header-image {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-    .search-holder {
-        float: left;
-        width:  100%;
-        margin-bottom: 10px;
-    }
-
-    .cart-holder {
-        display: none;
-    }
-
-    .header-nav > .container > ul > li > a {
-        font-size: 17px;
-    }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
    .logo-holder {
         float: left;
         width: 25%;
@@ -323,6 +231,14 @@ ul.topnav li.icon {
 }
 
 @media screen and (min-width: 1201px) {
+    .header-holder, .header-nav {
+        display: block;
+    }
+
+    mobi-header {
+        display: none;
+    }
+
     .logo-holder {
         float: left;
         width: 25%;
