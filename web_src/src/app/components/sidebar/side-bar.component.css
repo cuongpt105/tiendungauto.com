@@ -82,6 +82,13 @@ nav .nav>li>a.nav-icon:after{
     display: none;
 }
 
+@media screen and (max-width: 1023px) {
+    .category-item-container {
+        display: none;
+    }
+}
+
+/*
 @media screen and (max-width: 1000px) {
     .category-item-container {
         display: none;
@@ -127,4 +134,4 @@ nav .nav>li>a.nav-icon:after{
     nav .nav-item-mobile .item-level-3 {
         padding-left: 40px !important;
     }
-}
+}*/

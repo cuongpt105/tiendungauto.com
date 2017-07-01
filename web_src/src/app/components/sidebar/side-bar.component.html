@@ -23,6 +23,7 @@
     </nav>
 </div>
 
+<!-- 
 <div class="category-mobile-container">
     <div class="category-title">Danh Mục
         <i class="fa fa-bars" aria-hidden="true" (click)="onActiveCategoryMobile()" *ngIf="!categoryMobileActive"></i>
@@ -37,24 +38,24 @@
                         <a routerLink="/danh-muc/{{dm.id}}">{{dm.name}}</a>
                     </li>
 
-                    <!-- LEVEL 2 -->
+                    <!-- LEVEL 2
                     <li class="nav-item-mobile" *ngFor="let child of dm.children" (click)="onCategorySelected(child);">
                         <a routerLink="/danh-muc/{{child.id}}">{{child.name}}</a>
 
-                        <!-- LEVEL 3 -->
+                        <!-- LEVEL 3
                         <ul class="nav-mobile" *ngIf="child.children.length > 0">
                             <li class="nav-item-mobile" *ngFor="let childL3 of child.children" (click)="onCategorySelected(childL3); $event.stopPropagation();">
                                 <a class="item-level-3" routerLink="/danh-muc/{{childL3.id}}">{{childL3.name}}</a>
                             </li>
-                        </ul>   <!-- END LEVEL 3 -->
+                        </ul>   <!-- END LEVEL 3
 
-                    </li>   <!-- END LEVEL 2 -->
+                    </li>   <!-- END LEVEL 2
 
                 </ul>
             </nav>
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="clearfix"></div>
 

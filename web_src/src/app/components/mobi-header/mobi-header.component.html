@@ -13,6 +13,7 @@
             <div class="icon-mobi-header no-margin col-xs-3">
                 <div class="icon-shopping-cart pull-right" (click)="onCartIconSelected()">
                     <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+                    <div class="basket-item-count"><span class="count">{{totalQuantity}}</span></div>
                 </div>
 
                 <div class="icon-search-input pull-right" (click)="onSearchSelected()">
@@ -62,8 +63,13 @@
     </div>
 
     <!-- list menu item -->
-    <div *ngIf="isShowCategoryItem" class="menu-item-panel">
-
+    <div *ngIf="isShowMenuItem" class="menu-item-panel">
+        <ul class="nav-menu">
+            <li *ngFor="let item of menuItems">
+                <a [routerLink]="[item.linkRef]"
+                    (click)="onMenuItemSelected(item)">{{item.value}}</a>
+            </li>
+        </ul>
     </div>
 
     <!-- a div element to prevent user click any place -->

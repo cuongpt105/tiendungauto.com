@@ -9,14 +9,14 @@
     font-size: 18px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .main-side-bar, .main-content-panel {
         float: left;
         width:  100%;
     }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1024px) {
     .main-side-bar {
         float: left;
         width:  30%;

@@ -55,6 +55,14 @@
                             </button>
                             <button class="btn btn-primary" type="button" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
                         </li>
+
+                        <li class="lnk shopping-cart">
+                            <a class="add-to-cart" href="javascript:void(0)"
+                                title="Thêm vào giỏ hàng"
+                                (click)="addToCart(product)">
+                                <i class="icon fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
                         <li class="lnk wishlist">
                             <a class="add-to-cart" routerLink="/san-pham-yeu-thich/{{product.id}}" 
                                 title="Đưa vào sản phẩm yêu thích"
